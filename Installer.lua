@@ -80,8 +80,11 @@ function install()
 	writefile('vape/Profiles/6872265039.vapeprofile.txt')
 	writefile('vape/Profiles/6872265039GUIPositions.vapeprofile.txt')
 	writefile('vape/Profiles/6872274481.vapeprofile.txt')
+	
 	notification('Installer', 'deleting files...', 2)
+	
 	task.wait(1)
+	
     delfile('vape/Profiles/6872265039.vapeprofile.txt')
     delfile('vape/Profiles/6872265039GUIPositions.vapeprofile.txt')
     delfile('vape/Profiles/6872274481.vapeprofile.txt')
@@ -89,18 +92,25 @@ function install()
     notification('installer', 'deleted files.', 1)
 
 	notification('Wait', 'Waiting .5 Seconds', 0.5)
+	
     task.wait(0.5)
 
 	notification('Installer', 'writing files...', 2)
     writefile("vape/Profiles/6872265039.vapeprofile.txt", BedwarsLobby)
     writefile("vape/Profiles/6872265039GUIPositions.vapeprofile.txt", BedwarsGUI)
+	
 	notification('Wait', 'Waiting 1 Second', 1)
+	
     task.wait(1)
+	
     writefile("vape/Profiles/6872274481.vapeprofile.txt", GamePR)
+	
 	notification('Wait', 'Waiting .5 Seconds', 0.5)
+	
     task.wait(0.5)
 
 	notification('Wait', 'Waiting 2 Seconds', 2)
+	
     task.wait(2)
       
     notification('Installer', 'Done!', 10)
