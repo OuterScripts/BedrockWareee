@@ -65,7 +65,7 @@ function supportcheck()
 	end
 
 	if not delfile then
-		lplr:Kick("Executor does not support delfile, use Fluxus or Delta")
+		lplr:Kick("Not Supported! (delfile)")
 	end
 end
 
@@ -113,7 +113,7 @@ function install()
 	
     task.wait(0.5)
 
-	notification('Wait', 'Waiting 2 Seconds', 2)
+	notification('Installer', 'Finishing..', 2)
 	
     task.wait(2)
       
