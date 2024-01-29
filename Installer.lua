@@ -1,6 +1,6 @@
 --[[
 
-    The #1 Config for Render. (cap)
+    The #1 Config for Render.
     BedrockWare | Installer
 
 ]]
@@ -10,7 +10,7 @@ local isfile = isfile or function(file)
     return success and type(filecontents) == 'string'
 end 
 
-local lplr = game:GetService("Players").LocalPlayer
+local lplr = game:GetService("Players").LocalPlayer 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Installer", HidePremium = false, SaveConfig = false, IntroEnabled = false})
 local hwid = game:GetService('RbxAnalyticsService'):GetClientId()
@@ -20,7 +20,6 @@ local Tab = Window:MakeTab({
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
-
 
 local InfoTab = Window:MakeTab({
 	Name = "Info",
@@ -38,33 +37,31 @@ local function notification(name, content, time)
 	})
 end
 
-
-function Section(name, tab, text)
-    local name = tab:AddSection({
+function section(sectionname, tab, text)
+    local sectionname = tab:AddSection({
 	    Name = text
     })
 end
 
-
 function supportcheck()
 	if not isfile then
-		lplr:Kick("Not Supported! (isfile)")
+		lplr:Kick("Executor does not support isfile, use Fluxus or Delta.")
 	end
 
 	if not readfile then
-		lplr:Kick("Not Supported! (readfile)")
+		lplr:Kick("Executor does not support readfile, use Fluxus or Delta.")
 	end
 	
 	if not makefolder then
-		lplr:Kick("Not Supported! (makefolder)")
+		lplr:Kick("Executor does not support makefolder, use Fluxus or Delta.")
 	end
 
 	if not writefile then
-		lplr:Kick("Not Supported! (writefile)")
+		lplr:Kick("Executor does not support writefile, use Fluxus or Delta.")
 	end
 
 	if not delfile then
-		lplr:Kick("Not Supported! (delfile)")
+		lplr:Kick("Executor does not support delfile, use Fluxus or Delta")
 	end
 end
 
@@ -74,50 +71,38 @@ local BedwarsGUI = game:HttpGet("https://raw.githubusercontent.com/ninjawareforv
 local GamePR = game:HttpGet("https://raw.githubusercontent.com/ninjawareforvape/BedrockWareee/main/6872274481.vapeprofile.txt")
 
 function install()
-	notification('Wait', 'Waiting 1 Second', 1)
-	
+    task.wait(0.5)
+    
+    writefile('vape/Profiles/6872265039.vapeprofile.txt', '')
+    writefile('vape/Profiles/6872265039GUIPositions.vapeprofile.txt', '')
+    writefile('vape/Profiles/6872274481.vapeprofile.txt', '')
+    
     task.wait(1)
-	
-	notification('Installer', 'adding files...', 2)
-	
-	writefile('vape/Profiles/6872265039.vapeprofile.txt', '')
-	writefile('vape/Profiles/6872265039GUIPositions.vapeprofile.txt', '')
-	writefile('vape/Profiles/6872274481.vapeprofile.txt', '')
-	
-	notification('Installer', 'deleting files...', 2)
-	
-	task.wait(1)
-	
+    
     delfile('vape/Profiles/6872265039.vapeprofile.txt')
     delfile('vape/Profiles/6872265039GUIPositions.vapeprofile.txt')
     delfile('vape/Profiles/6872274481.vapeprofile.txt')
 
-    notification('installer', 'deleted files.', 1)
-
-	notification('Wait', 'Waiting .5 Seconds', 0.5)
-	
+    notification('Installer', 'Deleted Files...', 3)
+      
     task.wait(0.5)
-
-	notification('Installer', 'writing files...', 2)
-	
-    writefile("vape/Profiles/6872265039.vapeprofile.txt", BedwarsLobby)
-    writefile("vape/Profiles/6872265039GUIPositions.vapeprofile.txt", BedwarsGUI)
-	
-	notification('Wait', 'Waiting 1 Second', 1)
-	
+    
+    notification('Installer', 'Writing Files...' 3)
+    
+    writefile('vape/Profiles/6872265039.vapeprofile.txt', BedwarsLobby)
+    writefile('vape/Profiles/6872265039GUIPositions.vapeprofile.txt', BedwarsGUI)
+    
     task.wait(1)
-	
+    
     writefile("vape/Profiles/6872274481.vapeprofile.txt", GamePR)
-	
-	notification('Wait', 'Waiting .5 Seconds', 0.5)
-	
+    
     task.wait(0.5)
-
-	notification('Installer', 'Finishing..', 2)
-	
+    
+    notification('Installer', 'Finishing up..' 2)
+    
     task.wait(2)
       
-    notification('Installer', 'Done!', 10)
+    notification('installer', 'Finished!', 5)
 end
 
 Tab:AddButton({
@@ -135,30 +120,18 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-	Name = "Render Discord"
+	Name = "Render Discord",
 	Callback = function()
-		setclipboard("discord.gg/render")
-
-		notification('Installer', 'Copied to clipboard!', 5)
-	end
-)}
-
-orionsection("Important3", Tab, "for the people with render and the config installed")
-
-Tab:AddButton({
-	Name = "render loader",
-	Callback = function()
-		loadfile("vape/NewMainScript.lua")()
+	    setclipboard("discord.gg/render")
+	    
+	    notification('Installer', 'Copied to clipboard', 5)
   	end    
 })
 
-Section("Info1", InfoTab, "name: " ..lplr.Name)
-Section("Info2", InfoTab, "UserID: " ..lplr.UserId)
-Section("Info3", InfoTab, "game: " ..game.Name)
-Section("Info4", InfoTab, "PlaceID: "..game.PlaceId)
-Section("Info5", InfoTab, "Hwid: "..hwid)
-Section("Important1", Tab, "You need Render (discord.gg/Render)")
-Section("Important2", Tab, "You cant use Arceus ios (no workspace)")
-Section("Info7", InfoTab, "Version: V2")
+section("Stat1", InfoTab, "Username: " ..lplr.Name)
+section("Stats2", InfoTab, "ID: " ..lplr.UserId)
+section("Stat3", InfoTab, "Game Name: " ..game.Name)
+section("Stat4", InfoTab, "Game ID: "..game.PlaceId)
+section("Stat5", InfoTab, "Hwid: "..hwid)
 
 OrionLib:Init()
