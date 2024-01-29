@@ -127,14 +127,16 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-	Name = "Install",
+	Name = "Install BedrockWare",
 	Callback = function()
 	    install()
   	end    
 })
 
+orionsection("Important3", Tab, "for the people with render and the config installed")
+
 Tab:AddButton({
-	Name = "Button!",
+	Name = "render loader",
 	Callback = function()
 		loadfile("vape/NewMainScript.lua")()
   	end    
