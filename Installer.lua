@@ -17,7 +17,6 @@ local Window = OrionLib:MakeWindow({Name = "Installer", HidePremium = false, Sav
 
 local hwid = game:GetService('RbxAnalyticsService'):GetClientId()
 local executor = (identifyexecutor and identifyexecutor() or getexecutorname and getexecutorname() or 'Unknown')
-local bedrockwareversion = game:HttpGet("https://raw.githubusercontent.com/ninjawareforvape/BedrockWareee/main/Version")
 
 local Tab = Window:MakeTab({
 	Name = "Installer",
@@ -137,6 +136,15 @@ Tab:AddButton({
   	end    
 })
 
+Tab:AddButton({
+	Name = "render discord"
+	Callback = function()
+		setclipboard("discord.gg/render")
+
+		notification('Installer', 'Copied to clipboard!', 5)
+	end
+)}
+
 orionsection("Important3", Tab, "for the people with render and the config installed")
 
 Tab:AddButton({
@@ -155,6 +163,6 @@ orionsection("Info5", InfoTab, "Hwid: "..hwid)
 orionsection("Info6", InfoTab, "Executor: "..executor)
 orionsection("Important1", Tab, "You need Render (discord.gg/Render)")
 orionsection("Important2", Tab, "You cant use Arceus ios (no workspace)")
-orionsection("Info7", InfoTab, "Version: "..bedrockwareversion)
+orionsection("Info7", InfoTab, "Version: V2")
 
 OrionLib:Init()
