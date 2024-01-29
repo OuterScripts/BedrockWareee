@@ -75,8 +75,11 @@ local GamePR = game:HttpGet("https://raw.githubusercontent.com/ninjawareforvape/
 
 function install()
 	notification('Wait', 'Waiting 1 Second', 1)
+	
     task.wait(1)
+	
 	notification('Installer', 'adding files...', 2)
+	
 	writefile('vape/Profiles/6872265039.vapeprofile.txt')
 	writefile('vape/Profiles/6872265039GUIPositions.vapeprofile.txt')
 	writefile('vape/Profiles/6872274481.vapeprofile.txt')
