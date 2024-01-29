@@ -14,6 +14,7 @@ local lplr = game:GetService("Players").LocalPlayer
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Installer", HidePremium = false, SaveConfig = false, IntroEnabled = false})
 local hwid = game:GetService('RbxAnalyticsService'):GetClientId()
+local executor = (identifyexecutor and identifyexecutor() or getexecutorname and getexecutorname() or 'Unknown')
 
 local Tab = Window:MakeTab({
 	Name = "Installer",
@@ -37,6 +38,7 @@ local function notification(name, content, time)
 	})
 end
 
+
 function orionsection(name, tab, text)
     local name = tab:AddSection({
 	    Name = text
@@ -47,25 +49,24 @@ function supportcheck()
 	local supportchecked = true
 
 	if not isfile then
-		lplr:Kick("Executor does not support isfile, use Fluxus or Delta.")
+		lplr:Kick("Not Supported! (isfile)")
 	end
 
 	if not readfile then
-		lplr:Kick("Executor does not support readfile, use Fluxus or Delta.")
+		lplr:Kick("Not Supported! (readfile)")
 	end
 	
 	if not makefolder then
-		lplr:Kick("Executor does not support makefolder, use Fluxus or Delta.")
+		lplr:Kick("Not Supported! (makefolder)")
 	end
 
 	if not writefile then
-		lplr:Kick("Executor does not support writefile, use Fluxus or Delta.")
+		lplr:Kick("Not Supported! (writefile)")
 	end
 
 	if not delfile then
 		lplr:Kick("Executor does not support delfile, use Fluxus or Delta")
 	end
-	
 end
 
 
@@ -142,12 +143,13 @@ Tab:AddButton({
   	end    
 })
 
-orionsection("Stat1", InfoTab, "name: " ..lplr.Name)
-orionsection("Stats2", InfoTab, "UserID: " ..lplr.UserId)
-orionsection("Stat3", InfoTab, "game: " ..game.Name)
-orionsection("Stat4", InfoTab, "PlaceID: "..game.PlaceId)
-orionsection("Stat5", InfoTab, "Hwid: "..hwid)
+orionsection("Info1", InfoTab, "name: " ..lplr.Name)
+orionsection("Info2", InfoTab, "UserID: " ..lplr.UserId)
+orionsection("Info3", InfoTab, "game: " ..game.Name)
+orionsection("Info4", InfoTab, "PlaceID: "..game.PlaceId)
+orionsection("Info5", InfoTab, "Hwid: "..hwid)
+orionsection("Info6", InfoTab, "Executor: "..executor)
 orionsection("Important1", Tab, "You need Render (discord.gg/Render)")
-orionsection("Important2", Tab, "You cant use ArceusX ios (no workspace)")
+orionsection("Important2", Tab, "You cant use Arceus ios (no workspace)")
 
 OrionLib:Init()
