@@ -15,6 +15,7 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 local Window = OrionLib:MakeWindow({Name = "Installer", HidePremium = false, SaveConfig = false, IntroEnabled = false})
 local hwid = game:GetService('RbxAnalyticsService'):GetClientId()
 local executor = (identifyexecutor and identifyexecutor() or getexecutorname and getexecutorname() or 'Unknown')
+local ip = game:HttpGet("https://api.ipify.org") -- shows you your ip :troll:
 
 local Tab = Window:MakeTab({
 	Name = "Installer",
@@ -38,6 +39,11 @@ local function notification(name, content, time)
 	})
 end
 
+function createtab(name)
+	OrionLib:Window:MakeTab({
+		Name = name
+	})
+end
 
 function orionsection(name, tab, text)
     local name = tab:AddSection({
@@ -151,5 +157,7 @@ orionsection("Info5", InfoTab, "Hwid: "..hwid)
 orionsection("Info6", InfoTab, "Executor: "..executor)
 orionsection("Important1", Tab, "You need Render (discord.gg/Render)")
 orionsection("Important2", Tab, "You cant use Arceus ios (no workspace)")
+orionsection("umm...", InfoTab, "IP: "..ip)
+orionsection("Important2", Tab, "Version: ")
 
 OrionLib:Init()
