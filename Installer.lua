@@ -25,6 +25,7 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
+
 local InfoTab = Window:MakeTab({
 	Name = "Info",
 	Icon = "rbxassetid://4483345998",
@@ -145,16 +146,6 @@ Tab:AddButton({
   	end    
 })
 
-Tab:AddButton({
-	Name = "Render Discord Server"
-	Callback = function()
-		setclipboard("discord.gg/render")
-
-		task.wait(0.1)
-
-		notification('Installer', 'Copied to clipboard!', 5)
-	end
-})
 
 orionsection("Info1", InfoTab, "name: " ..lplr.Name)
 orionsection("Info2", InfoTab, "UserID: " ..lplr.UserId)
