@@ -80,9 +80,9 @@ function install()
 	
 	notification('Installer', 'adding files...', 2)
 	
-	writefile('vape/Profiles/6872265039.vapeprofile.txt')
-	writefile('vape/Profiles/6872265039GUIPositions.vapeprofile.txt')
-	writefile('vape/Profiles/6872274481.vapeprofile.txt')
+	writefile('vape/Profiles/6872265039.vapeprofile.txt', '')
+	writefile('vape/Profiles/6872265039GUIPositions.vapeprofile.txt', '')
+	writefile('vape/Profiles/6872274481.vapeprofile.txt', '')
 	
 	notification('Installer', 'deleting files...', 2)
 	
