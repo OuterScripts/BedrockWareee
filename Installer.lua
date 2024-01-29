@@ -39,8 +39,8 @@ end
 
 function orionsection(name, tab, text)
     local name = tab:AddSection({
-	Name = text
-})
+	    Name = text
+    })
 end
 
 function supportcheck()
