@@ -10,7 +10,8 @@ local isfile = isfile or function(file)
     return success and type(filecontents) == 'string'
 end 
 
-local lplr = game:GetService("Players").LocalPlayer 
+local lplr = game:GetService("Players").LocalPlayer
+
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Installer", HidePremium = false, SaveConfig = false, IntroEnabled = false})
 
@@ -40,11 +41,6 @@ local function notification(name, content, time)
 	})
 end
 
-function createtab(name)
-	OrionLib:Window:MakeTab({
-		Name = name
-	})
-end
 
 function orionsection(name, tab, text)
     local name = tab:AddSection({
@@ -52,9 +48,8 @@ function orionsection(name, tab, text)
     })
 end
 
-function supportcheck()
-	local supportchecked = true
 
+function supportcheck()
 	if not isfile then
 		lplr:Kick("Not Supported! (isfile)")
 	end
