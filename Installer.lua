@@ -15,7 +15,7 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 local Window = OrionLib:MakeWindow({Name = "Installer", HidePremium = false, SaveConfig = false, IntroEnabled = false})
 local hwid = game:GetService('RbxAnalyticsService'):GetClientId()
 local executor = (identifyexecutor and identifyexecutor() or getexecutorname and getexecutorname() or 'Unknown')
-local ip = game:HttpGet("https://api.ipify.org") -- shows you your ip :troll:
+local bedrockwareversion = game:HttpGet("https://raw.githubusercontent.com/ninjawareforvape/BedrockWareee/main/Version")
 
 local Tab = Window:MakeTab({
 	Name = "Installer",
@@ -149,6 +149,17 @@ Tab:AddButton({
   	end    
 })
 
+Tab:AddButton({
+	Name = "Render Discord Server"
+	Callback = function()
+		setclipboard("discord.gg/render")
+
+		task.wait(0.1)
+
+		notification('Installer', 'Copied to clipboard!', 5)
+	end
+})
+
 orionsection("Info1", InfoTab, "name: " ..lplr.Name)
 orionsection("Info2", InfoTab, "UserID: " ..lplr.UserId)
 orionsection("Info3", InfoTab, "game: " ..game.Name)
@@ -157,7 +168,6 @@ orionsection("Info5", InfoTab, "Hwid: "..hwid)
 orionsection("Info6", InfoTab, "Executor: "..executor)
 orionsection("Important1", Tab, "You need Render (discord.gg/Render)")
 orionsection("Important2", Tab, "You cant use Arceus ios (no workspace)")
-orionsection("umm...", InfoTab, "IP: "..ip)
-orionsection("Important2", Tab, "Version: ")
+orionsection("Info7", InfoTab, "Version: "..bedrockwareversion)
 
 OrionLib:Init()
