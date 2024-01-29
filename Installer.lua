@@ -1,6 +1,6 @@
 --[[
 
-    The #1 Config for Render.
+    The #1 Config for Render. (cap)
     BedrockWare | Installer
 
 ]]
@@ -37,8 +37,8 @@ local function notification(name, content, time)
 	})
 end
 
-function section(sectionname, tab, text)
-    local sectionname = tab:AddSection({
+function orionsection(name, tab, text)
+    local name = tab:AddSection({
 	Name = text
 })
 end
@@ -133,12 +133,12 @@ Tab:AddButton({
   	end    
 })
 
-section("Stat1", InfoTab, "Username: " ..lplr.Name)
-section("Stats2", InfoTab, "ID: " ..lplr.UserId)
-section("Stat3", InfoTab, "Game Name: " ..game.Name)
-section("Stat4", InfoTab, "Game ID: "..game.PlaceId)
-section("Stat5", InfoTab, "Hwid: "..hwid)
-section("Important1", Tab, "You need Render (discord.gg/Render)")
-section("Important2", Tab, "You cant use ArceusX ios (no workspace)")
+orionsection("Stat1", InfoTab, "name: " ..lplr.Name)
+orionsection("Stats2", InfoTab, "UserID: " ..lplr.UserId)
+orionsection("Stat3", InfoTab, "game: " ..game.Name)
+orionsection("Stat4", InfoTab, "PlaceID: "..game.PlaceId)
+orionsection("Stat5", InfoTab, "Hwid: "..hwid)
+orionsection("Important1", Tab, "You need Render (discord.gg/Render)")
+orionsection("Important2", Tab, "You cant use ArceusX ios (no workspace)")
 
 OrionLib:Init()
