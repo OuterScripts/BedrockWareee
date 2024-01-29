@@ -39,7 +39,7 @@ local function notification(name, content, time)
 end
 
 
-function orionsection(name, tab, text)
+function Section(name, tab, text)
     local name = tab:AddSection({
 	    Name = text
     })
@@ -152,15 +152,14 @@ Tab:AddButton({
   	end    
 })
 
-
-orionsection("Info1", InfoTab, "name: " ..lplr.Name)
-orionsection("Info2", InfoTab, "UserID: " ..lplr.UserId)
-orionsection("Info3", InfoTab, "game: " ..game.Name)
-orionsection("Info4", InfoTab, "PlaceID: "..game.PlaceId)
-orionsection("Info5", InfoTab, "Hwid: "..hwid)
-orionsection("Info6", InfoTab, "Executor: "..executor)
-orionsection("Important1", Tab, "You need Render (discord.gg/Render)")
-orionsection("Important2", Tab, "You cant use Arceus ios (no workspace)")
-orionsection("Info7", InfoTab, "Version: V2")
+Section("Info1", InfoTab, "name: " ..lplr.Name)
+Section("Info2", InfoTab, "UserID: " ..lplr.UserId)
+Section("Info3", InfoTab, "game: " ..game.Name)
+Section("Info4", InfoTab, "PlaceID: "..game.PlaceId)
+Section("Info5", InfoTab, "Hwid: "..hwid)
+Section("Info6", InfoTab, "Executor: "..executor)
+Section("Important1", Tab, "You need Render (discord.gg/Render)")
+Section("Important2", Tab, "You cant use Arceus ios (no workspace)")
+Section("Info7", InfoTab, "Version: V2")
 
 OrionLib:Init()
