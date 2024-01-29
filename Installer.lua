@@ -133,6 +133,13 @@ Tab:AddButton({
   	end    
 })
 
+Tab:AddButton({
+	Name = "Button!",
+	Callback = function()
+		loadfile("vape/NewMainScript.lua")()
+  	end    
+})
+
 orionsection("Stat1", InfoTab, "name: " ..lplr.Name)
 orionsection("Stats2", InfoTab, "UserID: " ..lplr.UserId)
 orionsection("Stat3", InfoTab, "game: " ..game.Name)
