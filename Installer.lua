@@ -74,24 +74,30 @@ local BedwarsGUI = game:HttpGet("https://raw.githubusercontent.com/ninjawareforv
 local GamePR = game:HttpGet("https://raw.githubusercontent.com/ninjawareforvape/BedrockWareee/main/6872274481.vapeprofile.txt")
 
 function install()
+	notification('Wait', 'Waiting 1 Second', 1)
     task.wait(1)
+	notification('Installer', 'deleting files...', 2)
     delfile('vape/Profiles/6872265039.vapeprofile.txt')
     delfile('vape/Profiles/6872265039GUIPositions.vapeprofile.txt')
     delfile('vape/Profiles/6872274481.vapeprofile.txt')
 
-    print("Deleted files.")
-      
+    notification('installer', 'deleted files.', 1)
+
+	notification('Wait', 'Waiting .5 Seconds', 0.5)
     task.wait(0.5)
       
     writefile("vape/Profiles/6872265039.vapeprofile.txt", BedwarsLobby)
     writefile("vape/Profiles/6872265039GUIPositions.vapeprofile.txt", BedwarsGUI)
+	notification('Wait', 'Waiting 1 Second', 1)
     task.wait(1)
     writefile("vape/Profiles/6872274481.vapeprofile.txt", GamePR)
+	notification('Wait', 'Waiting .5 Seconds', 0.5)
     task.wait(0.5)
-      
+
+	notification('Wait', 'Waiting 2 Seconds', 2)
     task.wait(2)
       
-    print("finished")
+    notification('Installer', 'Done!', 10)
 end
 
 Tab:AddButton({
@@ -104,13 +110,7 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "Install",
 	Callback = function()
-	    if supportchecked == true then
-	        install()
-	    end
-	    
-	    if supportchecked == nil then
-	        notification('Install', 'Check Support!', 5)
-	    end
+	    install()
   	end    
 })
 
@@ -119,5 +119,6 @@ section("Stats2", InfoTab, "ID: " ..lplr.UserId)
 section("Stat3", InfoTab, "Game Name: " ..game.Name)
 section("Stat4", InfoTab, "Game ID: "..game.PlaceId)
 section("Stat5", InfoTab, "Hwid: "..hwid)
+section("Important1", Tab, "You need Render (discord.gg/Render)")
 
 OrionLib:Init()
