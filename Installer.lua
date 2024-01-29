@@ -109,7 +109,7 @@ Tab:AddButton({
 	    end
 	    
 	    if supportchecked == nil then
-	        notification(Install, "Check Support!", 5)
+	        notification('Install', 'Check Support!', 5)
 	    end
   	end    
 })
