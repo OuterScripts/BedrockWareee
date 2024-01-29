@@ -13,7 +13,6 @@ end
 local lplr = game:GetService("Players").LocalPlayer 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Installer", HidePremium = false, SaveConfig = false, IntroEnabled = false})
-local supportchecked
 local hwid = game:GetService('RbxAnalyticsService'):GetClientId()
 
 local Tab = Window:MakeTab({
@@ -45,6 +44,8 @@ function section(sectionname, tab, text)
 end
 
 function supportcheck()
+	local supportchecked = true
+
 	if not isfile then
 		lplr:Kick("Executor does not support isfile, use Fluxus or Delta.")
 	end
@@ -65,7 +66,6 @@ function supportcheck()
 		lplr:Kick("Executor does not support delfile, use Fluxus or Delta")
 	end
 	
-	local supportchecked = true
 end
 
 
