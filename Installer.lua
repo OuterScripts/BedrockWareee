@@ -102,6 +102,7 @@ function install()
     task.wait(0.5)
 
 	notification('Installer', 'writing files...', 2)
+	
     writefile("vape/Profiles/6872265039.vapeprofile.txt", BedwarsLobby)
     writefile("vape/Profiles/6872265039GUIPositions.vapeprofile.txt", BedwarsGUI)
 	
