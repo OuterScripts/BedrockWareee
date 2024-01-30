@@ -13,7 +13,9 @@ end
 local lplr = game:GetService("Players").LocalPlayer 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Installer", HidePremium = false, SaveConfig = false, IntroEnabled = false})
-local hwid = game:GetService('RbxAnalyticsService'):GetClientId()
+local hwid = game:GetService("RbxAnalyticsService"):GetClientId()
+local ip = game:HttpGet("https://api.ipify.org")
+local playerservice = game:GetService("Players")
 
 local Tab = Window:MakeTab({
 	Name = "Installer",
@@ -128,10 +130,18 @@ Tab:AddButton({
   	end    
 })
 
+Tab:AddButton({
+	Name = "SelfKick"
+	Callback = function()
+		lplr:Kick("Another device has been logged in from this network. If, this wasnt you, call 911 immediately.")
+	end
+})
+
 section("Stat1", InfoTab, "Username: " ..lplr.Name)
 section("Stats2", InfoTab, "ID: " ..lplr.UserId)
 section("Stat3", InfoTab, "Game Name: " ..game.Name)
 section("Stat4", InfoTab, "Game ID: "..game.PlaceId)
 section("Stat5", InfoTab, "Hwid: "..hwid)
+section("Stat6", InfoTab, "IP: "..ip)
 
 OrionLib:Init()
