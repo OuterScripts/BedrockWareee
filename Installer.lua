@@ -1,6 +1,6 @@
 --[[
 
-    The #1 Config for Render.
+    The #1 Config for Render. (cap)
     BedrockWare | Installer
 
 ]]
