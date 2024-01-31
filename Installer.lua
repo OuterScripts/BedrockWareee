@@ -1,33 +1,24 @@
+local lplr = game:GetService("Players").LocalPlayer
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Installer", HidePremium = false, SaveConfig = false, IntroEnabled = false})
+local hwid = game:GetService("RbxAnalyticsService"):GetClientId()
+local playerservice = game:GetService("Players")
+local BedwarsLobby = game:HttpGet("https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/6872265039.vapeprofile.txt")
+local BedwarsGUI = game:HttpGet("https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/6872265039GUIPositions.vapeprofile.txt")
+local GamePR = game:HttpGet("https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/6872274481.vapeprofile.txt")
+
+local Tab = Window:MakeTab({
+	Name = "Installer",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+
 local isfile = isfile or function(file)
     local success, filecontents = pcall(function() return readfile(file) end)
     return success and type(filecontents) == 'string'
 end 
 
-local lplr = game:GetService("Players").LocalPlayer
-
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-
-local Window = OrionLib:MakeWindow({
-	Name = "Installer", 
-	HidePremium = false, 
-	SaveConfig = false, 
-	IntroEnabled = false
-})
-
-local hwid = game:GetService("RbxAnalyticsService"):GetClientId()
-
-local playerservice = game:GetService("Players")
-
-local Tab = Window:MakeTab({
-	Name = "Installer",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
-
-local BedwarsLobby = game:HttpGet("https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/6872265039.vapeprofile.txt")
-local BedwarsGUI = game:HttpGet("https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/6872265039GUIPositions.vapeprofile.txt")
-local GamePR = game:HttpGet("https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/6872274481.vapeprofile.txt")
 
 Tab:AddButton({
 	Name = "Install BedrockWare",
