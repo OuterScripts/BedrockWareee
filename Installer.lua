@@ -36,19 +36,6 @@ local BedwarsLobby = game:HttpGet("https://raw.githubusercontent.com/OuterScript
 local BedwarsGUI = game:HttpGet("https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/6872265039GUIPositions.vapeprofile.txt")
 local GamePR = game:HttpGet("https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/6872274481.vapeprofile.txt")
 
-function install()
-    task.wait(0.5)
-    
-    writefile('vape/Profiles/6872265039.vapeprofile.txt', '')
-    writefile('vape/Profiles/6872265039GUIPositions.vapeprofile.txt', '')
-    writefile('vape/Profiles/6872274481.vapeprofile.txt', '')
-    
-    task.wait(1)
-    
-    delfile('vape/Profiles/6872265039.vapeprofile.txt')
-    delfile('vape/Profiles/6872265039GUIPositions.vapeprofile.txt')
-    delfile('vape/Profil
-
 
 Tab:AddButton({
 	Name = "Install BedrockWare",
