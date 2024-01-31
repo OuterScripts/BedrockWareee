@@ -9,4 +9,5 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/OuterScripts/BedrockW
 
 # Contact
 
-* if its not working, dm **kidtoxicyt** and ill fix the issue (discord server being made)
+* if its not working, dm **kidtoxicyt** on discord and ill fix the issue (server being made)
+
