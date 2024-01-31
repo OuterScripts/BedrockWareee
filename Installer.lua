@@ -3,11 +3,13 @@ local isfile = isfile or function(file)
     return success and type(filecontents) == 'string'
 end 
 
+local lplr = game:GetService("Players").LocalPlayer
 
-local lplr = game:GetService("Players").LocalPlayer 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Installer", HidePremium = false, SaveConfig = false, IntroEnabled = false})
+
 local hwid = game:GetService("RbxAnalyticsService"):GetClientId()
+
 local playerservice = game:GetService("Players")
 
 
