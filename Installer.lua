@@ -9,6 +9,7 @@ local Window = OrionLib:MakeWindow({Name = "Installer", HidePremium = false, Sav
 local hwid = game:GetService("RbxAnalyticsService"):GetClientId()
 local playerservice = game:GetService("Players")
 
+
 local Tab = Window:MakeTab({
 	Name = "Installer",
 	Icon = "rbxassetid://4483345998",
@@ -26,7 +27,6 @@ local function notification(name, content, time)
     OrionLib:MakeNotification({
     	Name = name,
     	Content = content,
-    	Image = "rbxassetid://4483345998",
     	Time = time
 	})
 end
@@ -68,12 +68,6 @@ function install()
     notification('installer', 'Finished!', 5)
 end
 
-Tab:AddButton({
-	Name = "Support Check",
-	Callback = function()
-	    supportcheck()
-  	end    
-})
 
 Tab:AddButton({
 	Name = "Install BedrockWare",
