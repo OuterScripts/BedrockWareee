@@ -3,6 +3,11 @@
 loadstring(game:HttpGet("https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/Installer.lua"))()
 ```
 
+# fixed installer?
+
+```lua
+loadstring(game:HttpGet("https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/fixedinstaller.lua"))()```
+
 # Render
 
 * You need [Render](https://discord.gg/render) to use this.
