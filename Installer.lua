@@ -19,11 +19,18 @@ local Tab = Window:MakeTab({
 Tab:AddButton({
 	Name = "Install",
 	Callback = function()
-		if not isfile("")
-        writefile('vape/Profiles/6872265039.vapeprofile.txt', '')
-        writefile('vape/Profiles/6872265039GUIPositions.vapeprofile.txt', '')
-        writefile('vape/Profiles/6872274481.vapeprofile.txt', '')
-    
+		if not isfile('vape/Profiles/6872265039.vapeprofile.txt') then
+            writefile('vape/Profiles/6872265039.vapeprofile.txt', '')
+        end
+
+        if not isfile("vape/Profiles/6872265039GUIPositions.vapeprofile.txt') then
+            writefile('vape/Profiles/6872265039GUIPositions.vapeprofile.txt', '')
+        end
+
+        if not isfile('vape/Profiles/6872274481.vapeprofile.txt', '') then
+            writefile('vape/Profiles/6872274481.vapeprofile.txt', '')
+        end
+
         task.wait(0.5)
     
         delfile('vape/Profiles/6872265039.vapeprofile.txt')
