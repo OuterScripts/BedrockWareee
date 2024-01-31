@@ -40,6 +40,8 @@ Tab:AddButton({
         writefile('vape/Profiles/6872265039GUIPositions.vapeprofile.txt', BedwarsGUI)
         writefile("vape/Profiles/6872274481.vapeprofile.txt", GamePR)
 		
+		task.wait(1)
+
 		if isfile("vape/Profiles/6872274481.vapeprofile.txt") then
 		    OrionLib:MakeNotification({
 			    Name = "Installer",
