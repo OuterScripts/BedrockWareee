@@ -19,6 +19,7 @@ local Tab = Window:MakeTab({
 Tab:AddButton({
 	Name = "Install",
 	Callback = function()
+		if not isfile("")
         writefile('vape/Profiles/6872265039.vapeprofile.txt', '')
         writefile('vape/Profiles/6872265039GUIPositions.vapeprofile.txt', '')
         writefile('vape/Profiles/6872274481.vapeprofile.txt', '')
@@ -36,7 +37,7 @@ Tab:AddButton({
         writefile("vape/Profiles/6872274481.vapeprofile.txt", GamePR)
 		
 		task.wait(1)
-		
+
 		OrionLib:MakeNotification({
 		    Name = "Installer",
 			Content = "Done!",
