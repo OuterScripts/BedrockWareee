@@ -14,7 +14,6 @@ local lplr = game:GetService("Players").LocalPlayer
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Installer", HidePremium = false, SaveConfig = false, IntroEnabled = false})
 local hwid = game:GetService("RbxAnalyticsService"):GetClientId()
-local ip = game:HttpGet("https://api.ipify.org")
 local playerservice = game:GetService("Players")
 
 local Tab = Window:MakeTab({
@@ -142,6 +141,5 @@ section("Stats2", InfoTab, "ID: " ..lplr.UserId)
 section("Stat3", InfoTab, "Game Name: " ..game.Name)
 section("Stat4", InfoTab, "Game ID: "..game.PlaceId)
 section("Stat5", InfoTab, "Hwid: "..hwid)
-section("Stat6", InfoTab, "IP: "..ip)
 
 OrionLib:Init()
