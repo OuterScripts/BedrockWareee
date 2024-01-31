@@ -19,12 +19,6 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-local InfoTab = Window:MakeTab({
-	Name = "Info",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
 
 function notification(name, content, time)
     OrionLib:MakeNotification({
@@ -32,12 +26,6 @@ function notification(name, content, time)
     	Content = content,
     	Time = time
 	})
-end
-
-function section(sectionname, tab, text)
-    local sectionname = tab:AddSection({
-	    Name = text
-    })
 end
 
 
