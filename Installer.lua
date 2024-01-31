@@ -47,26 +47,36 @@ function install()
     
     delfile('vape/Profiles/6872265039.vapeprofile.txt')
     delfile('vape/Profiles/6872265039GUIPositions.vapeprofile.txt')
-    delfile('vape/Profiles/6872274481.vapeprofile.txt')
-
-    notification('Installer', 'Deleted Files...', 3)
-      
-    task.wait(0.5)
-    
-    notification('Installer', 'Writing Files...' 3)
-    
-    writefile('vape/Profiles/6872265039.vapeprofile.txt', BedwarsLobby)
-    writefile('vape/Profiles/6872265039GUIPositions.vapeprofile.txt', BedwarsGUI)
-    writefile("vape/Profiles/6872274481.vapeprofile.txt", GamePR)
-
-    notification('installer', 'Finished!', 5)
-end
+    delfile('vape/Profil
 
 
 Tab:AddButton({
 	Name = "Install BedrockWare",
 	Callback = function()
-	    install()
+	    task.wait(0.5)
+    
+        writefile('vape/Profiles/6872265039.vapeprofile.txt', '')
+        writefile('vape/Profiles/6872265039GUIPositions.vapeprofile.txt', '')
+        writefile('vape/Profiles/6872274481.vapeprofile.txt', '')
+    
+        task.wait(1)
+    
+        delfile('vape/Profiles/6872265039.vapeprofile.txt')
+        delfile('vape/Profiles/6872265039GUIPositions.vapeprofile.txt')
+        delfile('vape/Profiles/6872274481.vapeprofile.txt')
+      
+        task.wait(0.5)
+    
+        writefile('vape/Profiles/6872265039.vapeprofile.txt', BedwarsLobby)
+        writefile('vape/Profiles/6872265039GUIPositions.vapeprofile.txt', BedwarsGUI)
+        writefile("vape/Profiles/6872274481.vapeprofile.txt", GamePR)
+
+		OrionLib:MakeNotification({
+			Name = "Installer",
+			Content = "Done!",
+			Image = "rbxassetid://4483345998",
+			Time = 5
+		})
   	end    
 })
 
