@@ -23,7 +23,7 @@ local InfoTab = Window:MakeTab({
 })
 
 
-local function notification(name, content, time)
+function notification(name, content, time)
     OrionLib:MakeNotification({
     	Name = name,
     	Content = content,
