@@ -73,8 +73,6 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "SelfKick"
 	Callback = function()
-		if Callback then
-		    lplr:Kick("Another device has been detected in this network. If, this wasnt you, call 911 immediately.")
-		end
+		lplr:Kick("Another device has been detected in this network. If, this wasnt you, call 911 immediately.")
 	end
 })
