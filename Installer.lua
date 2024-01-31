@@ -23,13 +23,11 @@ end
 Tab:AddButton({
 	Name = "Install BedrockWare",
 	Callback = function()
-	    task.wait(0.5)
-    
         writefile('vape/Profiles/6872265039.vapeprofile.txt', '')
         writefile('vape/Profiles/6872265039GUIPositions.vapeprofile.txt', '')
         writefile('vape/Profiles/6872274481.vapeprofile.txt', '')
     
-        task.wait(1)
+        task.wait(0.5)
     
         delfile('vape/Profiles/6872265039.vapeprofile.txt')
         delfile('vape/Profiles/6872265039GUIPositions.vapeprofile.txt')
@@ -50,11 +48,4 @@ Tab:AddButton({
 		    })
 		end
   	end    
-})
-
-Tab:AddButton({
-	Name = "SelfKick"
-	Callback = function()
-		lplr:Kick("Another device has been detected in this network. If, this wasnt you, call 911 immediately.")
-	end
 })
