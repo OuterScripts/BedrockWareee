@@ -20,7 +20,7 @@ local Tab = Window:MakeTab({
 })
 
 
-Tab:AddButton({
+Tab:AddButton({ -- please dont clown on me :sob:
 	Name = 'Install',
 	Callback = function()
 		if not isfile('vape/Profiles/6872265039.vapeprofile.txt') then
@@ -65,11 +65,13 @@ Tab:AddButton({
 		
 		task.wait(1)
 
-		OrionLib:MakeNotification({
-		    Name = 'Installer',
-			Content = 'Done!',
-		    Image = 'rbxassetid://4483345998',
-		    Time = 5
-		})
+        if isfile('vape/Profiles/6872274481.vapeprofile.txt') then
+		    OrionLib:MakeNotification({
+		        Name = 'Installer',
+			    Content = 'Done!',
+		        Image = 'rbxassetid://4483345998',
+		        Time = 5
+		    })
+        end
   	end    
 })
