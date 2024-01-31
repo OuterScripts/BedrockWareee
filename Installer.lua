@@ -17,7 +17,7 @@ local Tab = Window:MakeTab({
 
 
 Tab:AddButton({
-	Name = "Install BedrockWare",
+	Name = "Install",
 	Callback = function()
         writefile('vape/Profiles/6872265039.vapeprofile.txt', '')
         writefile('vape/Profiles/6872265039GUIPositions.vapeprofile.txt', '')
@@ -36,14 +36,12 @@ Tab:AddButton({
         writefile("vape/Profiles/6872274481.vapeprofile.txt", GamePR)
 		
 		task.wait(1)
-
-		if isfile("vape/Profiles/6872274481.vapeprofile.txt") then
-		    OrionLib:MakeNotification({
-			    Name = "Installer",
-		    	Content = "Done!",
-			    Image = "rbxassetid://4483345998",
-			    Time = 5
-		    })
-		end
+		
+		OrionLib:MakeNotification({
+		    Name = "Installer",
+			Content = "Done!",
+		    Image = "rbxassetid://4483345998",
+		    Time = 5
+		})
   	end    
 })
