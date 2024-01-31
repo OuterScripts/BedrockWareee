@@ -1,8 +1,9 @@
 local lplr = game:GetService("Players").LocalPlayer
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Installer", HidePremium = false, SaveConfig = false, IntroEnabled = false})
+local Window = OrionLib:MakeWindow({Name = "Installer", HidePremium = false, SaveConfig = false, ConfigFolder = "idk", IntroEnabled = false})
 local hwid = game:GetService("RbxAnalyticsService"):GetClientId()
 local playerservice = game:GetService("Players")
+local replicatedstorage = game:GetService("ReplicatedStorage")
 local BedwarsLobby = game:HttpGet("https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/6872265039.vapeprofile.txt")
 local BedwarsGUI = game:HttpGet("https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/6872265039GUIPositions.vapeprofile.txt")
 local GamePR = game:HttpGet("https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/6872274481.vapeprofile.txt")
