@@ -4,7 +4,6 @@
     BedrockWare | Installer
 
 ]]
-
 local isfile = isfile or function(file)
     local success, filecontents = pcall(function() return readfile(file) end)
     return success and type(filecontents) == 'string'
@@ -44,28 +43,6 @@ function section(sectionname, tab, text)
     })
 end
 
-function supportcheck()
-	if not isfile then
-		lplr:Kick("Executor does not support isfile, use Fluxus or Delta.")
-	end
-
-	if not readfile then
-		lplr:Kick("Executor does not support readfile, use Fluxus or Delta.")
-	end
-	
-	if not makefolder then
-		lplr:Kick("Executor does not support makefolder, use Fluxus or Delta.")
-	end
-
-	if not writefile then
-		lplr:Kick("Executor does not support writefile, use Fluxus or Delta.")
-	end
-
-	if not delfile then
-		lplr:Kick("Executor does not support delfile, use Fluxus or Delta")
-	end
-end
-
 
 local BedwarsLobby = game:HttpGet("https://raw.githubusercontent.com/ninjawareforvape/BedrockWareee/main/6872265039.vapeprofile.txt")
 local BedwarsGUI = game:HttpGet("https://raw.githubusercontent.com/ninjawareforvape/BedrockWareee/main/6872265039GUIPositions.vapeprofile.txt")
@@ -92,17 +69,8 @@ function install()
     
     writefile('vape/Profiles/6872265039.vapeprofile.txt', BedwarsLobby)
     writefile('vape/Profiles/6872265039GUIPositions.vapeprofile.txt', BedwarsGUI)
-    
-    task.wait(1)
-    
     writefile("vape/Profiles/6872274481.vapeprofile.txt", GamePR)
-    
-    task.wait(0.5)
-    
-    notification('Installer', 'Finishing up..' 2)
-    
-    task.wait(2)
-      
+
     notification('installer', 'Finished!', 5)
 end
 
