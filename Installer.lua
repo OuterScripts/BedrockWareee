@@ -8,17 +8,12 @@ local BedwarsLobby = game:HttpGet("https://raw.githubusercontent.com/OuterScript
 local BedwarsGUI = game:HttpGet("https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/6872265039GUIPositions.vapeprofile.txt")
 local GamePR = game:HttpGet("https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/6872274481.vapeprofile.txt")
 
+
 local Tab = Window:MakeTab({
 	Name = "Installer",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
-
-
-local isfile = isfile or function(file)
-    local success, filecontents = pcall(function() return readfile(file) end)
-    return success and type(filecontents) == 'string'
-end 
 
 
 Tab:AddButton({
