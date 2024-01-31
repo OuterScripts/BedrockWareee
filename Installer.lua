@@ -24,18 +24,10 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-function notification(name, content, time)
-    OrionLib:MakeNotification({
-    	Name = name,
-    	Content = content,
-    	Time = time
-	})
-end
 
 local BedwarsLobby = game:HttpGet("https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/6872265039.vapeprofile.txt")
 local BedwarsGUI = game:HttpGet("https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/6872265039GUIPositions.vapeprofile.txt")
 local GamePR = game:HttpGet("https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/6872274481.vapeprofile.txt")
-
 
 Tab:AddButton({
 	Name = "Install BedrockWare",
