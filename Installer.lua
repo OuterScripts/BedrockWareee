@@ -42,7 +42,7 @@ local BedwarsLobby = game:HttpGet("https://raw.githubusercontent.com/ninjawarefo
 local BedwarsGUI = game:HttpGet("https://raw.githubusercontent.com/ninjawareforvape/BedrockWareee/main/6872265039GUIPositions.vapeprofile.txt")
 local GamePR = game:HttpGet("https://raw.githubusercontent.com/ninjawareforvape/BedrockWareee/main/6872274481.vapeprofile.txt")
 
-function install()
+local function install()
     task.wait(0.5)
     
     writefile('vape/Profiles/6872265039.vapeprofile.txt', '')
