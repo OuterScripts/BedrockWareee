@@ -1,6 +1,6 @@
 # Installer
 ```lua
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ninjawareforvape/BedrockWareee/main/Installer.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/Installer.lua"))()
 ```
 
 # Render
