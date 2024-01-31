@@ -18,13 +18,11 @@ local hwid = game:GetService("RbxAnalyticsService"):GetClientId()
 
 local playerservice = game:GetService("Players")
 
-
 local Tab = Window:MakeTab({
 	Name = "Installer",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
-
 
 function notification(name, content, time)
     OrionLib:MakeNotification({
@@ -33,7 +31,6 @@ function notification(name, content, time)
     	Time = time
 	})
 end
-
 
 local BedwarsLobby = game:HttpGet("https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/6872265039.vapeprofile.txt")
 local BedwarsGUI = game:HttpGet("https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/6872265039GUIPositions.vapeprofile.txt")
