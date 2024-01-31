@@ -1,9 +1,3 @@
---[[
-
-    The #1 Config for Render. (cap)
-    BedrockWare | Installer
-
-]]
 local isfile = isfile or function(file)
     local success, filecontents = pcall(function() return readfile(file) end)
     return success and type(filecontents) == 'string'
