@@ -45,7 +45,6 @@ local BedwarsLobby = game:HttpGet("https://raw.githubusercontent.com/OuterScript
 local BedwarsGUI = game:HttpGet("https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/6872265039GUIPositions.vapeprofile.txt")
 local GamePR = game:HttpGet("https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/6872274481.vapeprofile.txt")
 
-
 function install()
     task.wait(0.5)
     
@@ -87,11 +86,5 @@ Tab:AddButton({
 	end
 })
 
-
-section("Stat1", InfoTab, "Username: " ..lplr.Name)
-section("Stats2", InfoTab, "ID: " ..lplr.UserId)
-section("Stat3", InfoTab, "Game Name: " ..game.Name)
-section("Stat4", InfoTab, "Game ID: "..game.PlaceId)
-section("Stat5", InfoTab, "Hwid: "..hwid)
 
 OrionLib:Init()
