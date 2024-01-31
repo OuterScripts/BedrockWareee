@@ -42,7 +42,7 @@ local BedwarsLobby = game:HttpGet("https://raw.githubusercontent.com/ninjawarefo
 local BedwarsGUI = game:HttpGet("https://raw.githubusercontent.com/ninjawareforvape/BedrockWareee/main/6872265039GUIPositions.vapeprofile.txt")
 local GamePR = game:HttpGet("https://raw.githubusercontent.com/ninjawareforvape/BedrockWareee/main/6872274481.vapeprofile.txt")
 
-local function install()
+function install()
     task.wait(0.5)
     
     writefile('vape/Profiles/6872265039.vapeprofile.txt', '')
@@ -77,20 +77,12 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-	Name = "Render Discord",
-	Callback = function()
-	    setclipboard("discord.gg/render")
-	    
-	    notification('Installer', 'Copied to clipboard', 5)
-  	end    
-})
-
-Tab:AddButton({
 	Name = "SelfKick"
 	Callback = function()
 		lplr:Kick("Another device has been detected in this network. If, this wasnt you, call 911 immediately.")
 	end
 })
+
 
 section("Stat1", InfoTab, "Username: " ..lplr.Name)
 section("Stats2", InfoTab, "ID: " ..lplr.UserId)
