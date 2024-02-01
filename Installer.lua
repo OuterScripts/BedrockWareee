@@ -6,6 +6,7 @@ local BedwarsLobby = game:HttpGet('https://raw.githubusercontent.com/OuterScript
 local BedwarsGUI = game:HttpGet('https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/6872265039GUIPositions.vapeprofile.txt')
 local GamePR = game:HttpGet('https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/6872274481.vapeprofile.txt')
 
+
 function resetprofilesfolder()
     delfolder('vape/Profiles')
 
