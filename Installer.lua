@@ -29,7 +29,7 @@ function install()
 
     OrionLib:MakeNotification({
 	    Name = "Installer",
-	    Content = "Installed Profiles!",
+	    Content = "Profiles Installed!",
 	    Image = "rbxassetid://4483345998",
 	    Time = 5
     })
