@@ -3,10 +3,11 @@
 loadstring(game:HttpGet("https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/Installer.lua"))()
 ```
 
-# fixed installer?
+# Uninstaller (uninstalls all configs)
 
 ```lua
-loadstring(game:HttpGet("https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/fixedinstaller.lua"))()```
+loadstring(game:HttpGet("https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/uninstaller.lua"))()
+```
 
 # Render
 
