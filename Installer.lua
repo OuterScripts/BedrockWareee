@@ -5,7 +5,8 @@ local replicatedstorage = game:GetService('ReplicatedStorage')
 local BedwarsLobby = game:HttpGet('https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/6872265039.vapeprofile.txt')
 local BedwarsGUI = game:HttpGet('https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/6872265039GUIPositions.vapeprofile.txt')
 local GamePR = game:HttpGet('https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/6872274481.vapeprofile.txt')
-
+local MainScript = game:HttpGet('https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/MainScript.lua')
+local NewMainScript = game:HttpGet('https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/NewMainScript.lua')
 
 function resetprofilesfolder()
     delfolder('vape/Profiles')
@@ -13,6 +14,7 @@ function resetprofilesfolder()
     task.wait(0.5)
 
     makefolder('vape/Profiles')
+
 
     OrionLib:MakeNotification({
 	    Name = "Installer",
@@ -35,6 +37,17 @@ function install()
     })
 end
 
+function LoadVape
+    if isfile('vape/NewMainScript.lua') then
+        delfile('vape/NewMainScript.lua')
+    end
+
+    if isfile('vape/MainScript.lua') then
+        delfile('vape/MainScript.lua')
+    end
+
+    writ
+
 task.wait(1)
 
 resetprofilesfolder()
@@ -42,3 +55,6 @@ resetprofilesfolder()
 task.wait(0.5)
 
 install()
+
+task.wait(1)
+
