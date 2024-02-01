@@ -6,11 +6,6 @@ local BedwarsLobby = game:HttpGet('https://raw.githubusercontent.com/OuterScript
 local BedwarsGUI = game:HttpGet('https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/6872265039GUIPositions.vapeprofile.txt')
 local GamePR = game:HttpGet('https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/6872274481.vapeprofile.txt')
 
-local isfile = isfile or function(file) -- i needed it, ty render
-	local suc, res = pcall(function() return readfile(file) end)
-	return suc and res ~= nil
-end
-
 function resetprofilesfolder()
     delfolder('vape/Profiles')
 
