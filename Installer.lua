@@ -15,7 +15,6 @@ function resetprofilesfolder()
 
     makefolder('vape/Profiles')
 
-
     OrionLib:MakeNotification({
 	    Name = "Installer",
 	    Content = "Successfully Reset Profiles!",
