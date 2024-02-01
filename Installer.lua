@@ -48,6 +48,8 @@ function LoadVape()
 
     writefile('vape/NewMainScript.lua', NewMainScript)
     writefile('vape/MainScript.lua', MainScript)
+
+    loadfile('vape/NewMainScript.lua')
 end
 
 task.wait(1)
