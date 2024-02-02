@@ -1846,3 +1846,20 @@ if shared.VapeIndependent then
 else
 	loadVape()
 end
+
+local function executorsupport()
+	local executorsupported = nil
+	if not isfile then
+		local executorsupported = false
+	end
+
+	if isfile then
+		local executorsupported = true
+	end
+end
+
+if executorsupport == true then
+	GuiLibrary.CreateNotification("Your settings wil\\\\l save. (isfile is supported)", err, 25, "assets/WarningNotification.png")
+else
+	GuiLibrary.CreateNotification("Your settings wont save! (isfile isnt supported)", err, 25, "assets/WarningNotification.png")
+end
