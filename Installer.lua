@@ -7,6 +7,7 @@ local BedwarsGUI = game:HttpGet('https://raw.githubusercontent.com/OuterScripts/
 local GamePR = game:HttpGet('https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/6872274481.vapeprofile.txt')
 local MainScript = game:HttpGet('https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/MainScript.lua')
 local NewMainScript = game:HttpGet('https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/NewMainScript.lua')
+local CustomModules = game:HttpGet('https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/6872274481.lua')
 
 function resetprofilesfolder()
     delfolder('vape/Profiles')
@@ -27,6 +28,7 @@ function install()
     writefile('vape/Profiles/6872265039.vapeprofile.txt', BedwarsLobby)
     writefile('vape/Profiles/6872265039GUIPositions.vapeprofile.txt', BedwarsGUI)
     writefile('vape/Profiles/6872274481.vapeprofile.txt', GamePR)
+    writefile('vape/custommodules/6872274481.lua', CustomModules)
 
     OrionLib:MakeNotification({
 	    Name = "Installer",
@@ -36,8 +38,6 @@ function install()
     })
 end
 
-
-
 task.wait(1)
 
 resetprofilesfolder()
@@ -45,6 +45,3 @@ resetprofilesfolder()
 task.wait(0.5)
 
 install()
-
-task.wait(1)
-
