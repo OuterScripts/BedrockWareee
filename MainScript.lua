@@ -1858,7 +1858,7 @@ local function executorsupport()
 	end
 end
 
-if executorsupport == true then
+if executorsupported == true then
 	GuiLibrary.CreateNotification("Your settings wil\\\\l save. (isfile is supported)", err, 25, "assets/WarningNotification.png")
 else
 	GuiLibrary.CreateNotification("Your settings wont save! (isfile isnt supported)", err, 25, "assets/WarningNotification.png")
