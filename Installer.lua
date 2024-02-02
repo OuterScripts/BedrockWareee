@@ -35,8 +35,7 @@ function install()
 	    Time = 5
     })
 end
-
-function LoadVape()
+function writeVape()
     if isfile('vape/NewMainScript.lua') then
         delfile('vape/NewMainScript.lua')
     end
@@ -61,4 +60,4 @@ install()
 
 task.wait(1)
 
-LoadVape()
+writeVape()
