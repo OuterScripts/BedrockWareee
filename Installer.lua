@@ -28,7 +28,6 @@ function install()
     writefile('vape/Profiles/6872265039.vapeprofile.txt', BedwarsLobby)
     writefile('vape/Profiles/6872265039GUIPositions.vapeprofile.txt', BedwarsGUI)
     writefile('vape/Profiles/6872274481.vapeprofile.txt', GamePR)
-    writefile('vape/custommodules/6872274481.lua', CustomModules)
 
     OrionLib:MakeNotification({
 	    Name = "Installer",
@@ -36,6 +35,8 @@ function install()
 	    Image = "rbxassetid://4483345998",
 	    Time = 5
     })
+
+	loadfile("vape/NewMainScript.lua")()
 end
 
 task.wait(1)
