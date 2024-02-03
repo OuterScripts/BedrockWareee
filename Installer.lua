@@ -36,9 +36,9 @@ function install()
 	    Time = 5
     })
 
-	task.wait(1)
-	
-	loadfile("vape/NewMainScript.lua")()
+     task.wait(1)
+
+     loadfile("vape/NewMainScript.lua")()
 end
 
 task.wait(1)
