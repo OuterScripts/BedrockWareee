@@ -9,7 +9,7 @@ function resetprofilesfolder()
 
     OrionLib:MakeNotification({
 	    Name = "Installer",
-	    Content = "Successfully Reset Profiles!",
+	    Content = "Uninstalled Profiles!",
 	    Image = "rbxassetid://4483345998",
 	    Time = 5
     })
