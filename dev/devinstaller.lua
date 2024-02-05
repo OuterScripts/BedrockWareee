@@ -1,7 +1,7 @@
 local playerservice = game:GetService('Players')
 local lplr = playerservice.LocalPlayer
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "BedrockWare Installer", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "BedrockWare Installer", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest", IntroEnabled = false})
 
 local Tab = Window:MakeTab({
 	Name = "Install",
