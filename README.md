@@ -3,12 +3,19 @@
 loadstring(game:HttpGet("https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/Scripts/Installer.lua"))()
 ```
 
-# Uninstaller (uninstalls all configs)
-
+## Uninstaller (uninstalls all configs)
 ```lua
 loadstring(game:HttpGet("https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/Scripts/uninstaller.lua"))()
 ```
 
+## Changelog
+heres some changes in the latest update:
+```
+[-] Removed Atmosphere (laggy)
+[-] Removed Themes (laggy)
+[+] Added new ka animation
+[*] Made installer faster
+```
 # Render
 
 * You need [Render](https://discord.gg/render) to use this.
