@@ -10,7 +10,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/OuterScripts/BedrockW
 
 ## Changelog
 heres some changes in the latest update:
-```
+```lua
 [-] Removed Atmosphere (laggy)
 [-] Removed Themes (laggy)
 [+] Added new ka animation
