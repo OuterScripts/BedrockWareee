@@ -13,7 +13,7 @@ heres some changes in the latest update:
 ```lua
 [-] Removed Atmosphere (laggy)
 [-] Removed Themes (laggy)
-[+] Added new ka animation
+[+] Added Killaura animation
 [*] Made installer faster
 ```
 # Render
