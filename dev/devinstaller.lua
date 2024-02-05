@@ -82,8 +82,8 @@ Tab2:AddButton({
 })
 
 function CreateSection(name, tab, text)
-    local Section = Tab:AddSection({
-	Name = name
+    local Section = tab:AddSection({
+	Name = text
 })
 end
 
