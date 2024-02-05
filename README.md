@@ -1,12 +1,12 @@
 ![BedrockWare logo](https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/1707083670855.png)
 
 # Table Of Contents
-[Installer](https://github.com/OuterScripts/BedrockWareee/tree/main?tab=readme-ov-file#Installer)
-[Uninstaller](https://github.com/OuterScripts/BedrockWareee/tree/main?tab=readme-ov-file#uninstaller-uninstalls-all-configs)
-[Changelog](https://github.com/OuterScripts/BedrockWareee/tree/main?tab=readme-ov-file#changelog)
-[Render](https://github.com/OuterScripts/BedrockWareee/tree/main?tab=readme-ov-file#render)
-[Contact](https://github.com/OuterScripts/BedrockWareee/tree/main?tab=readme-ov-file#contact)
-[BedrockWare](https://github.com/OuterScripts/BedrockWareee/tree/main?tab=readme-ov-file#bedrockware)
+- [Installer](https://github.com/OuterScripts/BedrockWareee/tree/main?tab=readme-ov-file#Installer)
+- [Uninstaller](https://github.com/OuterScripts/BedrockWareee/tree/main?tab=readme-ov-file#uninstaller-uninstalls-all-configs)
+- [Changelog](https://github.com/OuterScripts/BedrockWareee/tree/main?tab=readme-ov-file#changelog)
+- [Render](https://github.com/OuterScripts/BedrockWareee/tree/main?tab=readme-ov-file#render)
+- [Contact](https://github.com/OuterScripts/BedrockWareee/tree/main?tab=readme-ov-file#contact)
+- [BedrockWare](https://github.com/OuterScripts/BedrockWareee/tree/main?tab=readme-ov-file#bedrockware)
 
 # Installer
 ```lua
