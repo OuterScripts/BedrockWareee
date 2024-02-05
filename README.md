@@ -7,6 +7,7 @@
 - [Render](https://github.com/OuterScripts/BedrockWareee/tree/main?tab=readme-ov-file#render)
 - [Contact](https://github.com/OuterScripts/BedrockWareee/tree/main?tab=readme-ov-file#contact)
 - [BedrockWare](https://github.com/OuterScripts/BedrockWareee/tree/main?tab=readme-ov-file#bedrockware)
+- https://github.com/OuterScripts/BedrockWareee/tree/main?tab=readme-ov-file#howtoinstall
 
 # Installer
 ```lua
@@ -26,6 +27,12 @@ heres some changes in the latest update:
 [+] Added Killaura animation
 [*] Made installer faster
 ```
+
+## HowToInstall
+1. Run your installer from [render](discord.gg/render)
+2. once done, run the the bedrockware installer
+3. wait a few seconds and vape will load
+4. from now one to use render, run loadfile("vape/NewMainScript.lua")()
 
 # Render
 
