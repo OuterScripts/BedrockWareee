@@ -1,4 +1,4 @@
-![BedrockWare logo](https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/1707083670855.png)
+![BedrockWare logo](https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/dev/BedrockWareLogo.png)
 
 # Table Of Contents
 - [Installer](https://github.com/OuterScripts/BedrockWareee/tree/main?tab=readme-ov-file#Installer)
