@@ -7,7 +7,7 @@
 - [Render](https://github.com/OuterScripts/BedrockWareee/tree/main?tab=readme-ov-file#render)
 - [Contact](https://github.com/OuterScripts/BedrockWareee/tree/main?tab=readme-ov-file#contact)
 - [BedrockWare](https://github.com/OuterScripts/BedrockWareee/tree/main?tab=readme-ov-file#bedrockware)
-- https://github.com/OuterScripts/BedrockWareee/tree/main?tab=readme-ov-file#howtoinstall
+- [how to install](https://github.com/OuterScripts/BedrockWareee/tree/main?tab=readme-ov-file#howtoinstall)
 
 # Installer
 ```lua
