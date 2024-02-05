@@ -17,3 +17,5 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/OuterScripts/BedrockW
 
 * if its not working, dm **kidtoxicyt** on discord and ill fix the issue (server being made)
 
+# BedrockWare
+![Unlimited Possibilities](https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/Screenshot_20240204-163741.png)
