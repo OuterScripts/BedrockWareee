@@ -14,6 +14,11 @@
 loadstring(game:HttpGet("https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/Scripts/Installer.lua"))()
 ```
 
+## Developer Installer
+installer that is almost never working:
+```lua
+loadstring(game:HttpGet("https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/dev/devinstaller.lua"))()
+```
 ## Uninstaller (uninstalls all configs)
 ```lua
 loadstring(game:HttpGet("https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/Scripts/uninstaller.lua"))()
