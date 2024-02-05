@@ -41,8 +41,6 @@ function install()
      loadfile("vape/NewMainScript.lua")()
 end
 
-task.wait(1)
-
 resetprofilesfolder()
 
 task.wait(0.5)
