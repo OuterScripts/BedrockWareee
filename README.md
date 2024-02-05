@@ -1,3 +1,4 @@
+![BedrockWare logo](https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/1707083670855.png)
 # Installer
 ```lua
 loadstring(game:HttpGet("https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/Scripts/Installer.lua"))()
