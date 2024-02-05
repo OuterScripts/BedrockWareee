@@ -16,6 +16,7 @@ heres some changes in the latest update:
 [+] Added Killaura animation
 [*] Made installer faster
 ```
+
 # Render
 
 * You need [Render](https://discord.gg/render) to use this.
