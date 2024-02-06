@@ -31,6 +31,9 @@ heres some changes in the latest update:
 [-] Removed Themes (laggy)
 [+] Added Killaura animation
 [*] Made installer faster
+[-] Removed disabler (patched)
+[-] Removed HealExploit (patched)
+[-] Removed BubbleExploit (patched)
 ```
 
 ## HowToInstall
