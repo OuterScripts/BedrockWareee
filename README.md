@@ -14,8 +14,8 @@
 loadstring(game:HttpGet("https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/Scripts/Installer.lua"))()
 ```
 
-## Developer Installer
-installer that is almost never working:
+## Installer With GUI
+installer:
 ```lua
 loadstring(game:HttpGet("https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/dev/devinstaller.lua"))()
 ```
