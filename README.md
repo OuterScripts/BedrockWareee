@@ -24,7 +24,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/OuterScripts/BedrockW
 loadstring(game:HttpGet("https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/Scripts/uninstaller.lua"))()
 ```
 
-## Changelog
+## Changes
 heres some changes in the latest update:
 ```lua
 [-] Removed Atmosphere (laggy)
