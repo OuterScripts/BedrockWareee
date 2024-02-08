@@ -1,10 +1,9 @@
--- Render Custom Vape Signed File
 --[[
 
     Render Intents | Bedwars
     The #1 vape mod you'll ever see.
 
-    Version: 1.4.1
+    Version: 1.5
     discord.gg/render
 
 ]]
@@ -571,8 +570,8 @@ local function switchItem(tool)
 end
 
 local function switchToAndUseTool(block, legit)
-	local tool = getBestTool(block.Name)
-	if tool and (entityLibrary.isAlive and lplr.Character:FindFirstChild('HandInvItem') and lplr.Character.HandInvItem.Value ~= tool.tool) then
+	local tool = getBestTool(block.Name)FindFirst
+	if tool and (entityLibrary.isAlive and lplr.Character:Child('HandInvItem') and lplr.Character.HandInvItem.Value ~= tool.tool) then
 		if legit then
 			if getHotbarSlot(tool.itemType) then
 				bedwars.ClientStoreHandler:dispatch({
@@ -2211,9 +2210,9 @@ end)
 runFunction(function()
 	local AutoLeaveDelay = {Value = 1}
 	local AutoPlayAgain = {}
-	local AutoLeaveStaff = {Enabled = true}
-	local AutoLeaveRealLeave = {Enabled = true}
-	local AutoLeaveStaff2 = {Enabled = true}
+	local AutoLeaveStaff = {}
+	local AutoLeaveRealLeave = {}
+	local AutoLeaveStaff2 = {}
 	local AutoLeaveRandom = {}
 	local stafftable = {}
 	local leaveAttempted = false
@@ -2482,8 +2481,8 @@ runFunction(function()
 	local Fly = {}
 	local FlyMode = {Value = 'CFrame'}
 	local FlyVerticalSpeed = {Value = 40}
-	local FlyVertical = {Enabled = true}
-	local FlyAutoPop = {Enabled = true}
+	local FlyVertical = {}
+	local FlyAutoPop = {}
 	local FlyAnyway = {}
 	local FlyAnywayProgressBar = {}
 	local FlyDamageAnimation = {}
@@ -2815,7 +2814,7 @@ runFunction(function()
 	local GrappleExploit = {}
 	local GrappleExploitMode = {Value = 'Normal'}
 	local GrappleExploitVerticalSpeed = {Value = 40}
-	local GrappleExploitVertical = {Enabled = true}
+	local GrappleExploitVertical = {}
 	local GrappleExploitUp = false
 	local GrappleExploitDown = false
 	local alternatelist = {'Normal', 'AntiCheat A', 'AntiCheat B'}
@@ -2889,7 +2888,7 @@ runFunction(function()
 	local InfiniteFlyMode = {Value = 'CFrame'}
 	local InfiniteFlySpeed = {Value = 23}
 	local InfiniteFlyVerticalSpeed = {Value = 40}
-	local InfiniteFlyVertical = {Enabled = true}
+	local InfiniteFlyVertical = {}
 	local InfiniteFlyUp = false
 	local InfiniteFlyDown = false
 	local alternatelist = {'Normal', 'AntiCheat A', 'AntiCheat B'}
@@ -5115,7 +5114,7 @@ runFunction(function()
 	local BedESPTable = {}
 	local BedESPColor = {Value = 0.44}
 	local BedESPTransparency = {Value = 1}
-	local BedESPOnTop = {Enabled = true}
+	local BedESPOnTop = {}
 	BedESP = GuiLibrary.ObjectsThatCanBeSaved.RenderWindow.Api.CreateOptionsButton({
 		Name = 'BedESP',
 		Function = function(calling) 
@@ -5339,7 +5338,7 @@ runFunction(function()
 	ChestESPFolder.Name = 'ChestESPFolder'
 	ChestESPFolder.Parent = GuiLibrary.MainGui
 	local ChestESP = {}
-	local ChestESPBackground = {Enabled = true}
+	local ChestESPBackground = {}
 
 	local function chestfunc(v)
 		task.spawn(function()
@@ -6056,6 +6055,16 @@ runFunction(function()
 				if not transformed then
 					transformed = true
 					themefunctions[GameThemeMode.Value]()
+					repeat task.wait() until shared.VapeFullyLoaded
+					if isEnabled('Atmosphere') then 
+						GuiLibrary.ObjectsThatCanBeSaved.AtmosphereOptionsButton.Api.ToggleButton()
+						GuiLibrary.ObjectsThatCanBeSaved.AtmosphereOptionsButton.Api.ToggleButton() 
+					end
+					task.wait()
+					if isEnabled('HealthbarMods') then 
+						GuiLibrary.ObjectsThatCanBeSaved.HealthbarModsOptionsButton.Api.ToggleButton()
+						GuiLibrary.ObjectsThatCanBeSaved.HealthbarModsOptionsButton.Api.ToggleButton() 
+					end
 				else
 					GameTheme.ToggleButton(false)
 				end
@@ -6302,10 +6311,10 @@ runFunction(function()
 	local NameTagsDisplayName = {}
 	local NameTagsHealth = {}
 	local NameTagsDistance = {}
-	local NameTagsBackground = {Enabled = true}
+	local NameTagsBackground = {}
 	local NameTagsScale = {Value = 10}
 	local NameTagsFont = {Value = "SourceSans"}
-	local NameTagsTeammates = {Enabled = true}
+	local NameTagsTeammates = {}
 	local NameTagsShowInventory = {}
 	local NameTagsRangeLimit = {Value = 0}
 	local fontitems = {"SourceSans"}
@@ -6994,7 +7003,7 @@ runFunction(function()
 	local AutoBuyDiamond = {}
 	local AutoBuyAlarm = {}
 	local AutoBuyGui = {}
-	local AutoBuyTierSkip = {Enabled = true}
+	local AutoBuyTierSkip = {}
 	local AutoBuyRange = {Value = 20}
 	local AutoBuyCustom = {ObjectList = {}, RefreshList = function() end}
 	local AutoBankUIToggle = {}
@@ -7710,7 +7719,7 @@ end)
 runFunction(function()
 	local AutoConsume = {}
 	local AutoConsumeHealth = {Value = 100}
-	local AutoConsumeSpeed = {Enabled = true}
+	local AutoConsumeSpeed = {}
 	local AutoConsumeDelay = tick()
 
 	local function AutoConsumeFunc()
@@ -8586,7 +8595,7 @@ runFunction(function()
 	local ChestStealerDistance = {Value = 1}
 	local ChestStealerDelay = {Value = 1}
 	local ChestStealerOpen = {}
-	local ChestStealerSkywars = {Enabled = true}
+	local ChestStealerSkywars = {}
 	local cheststealerdelays = {}
 	local cheststealerfuncs = {
 		Open = function()
@@ -11015,8 +11024,8 @@ end)
 
 runFunction(function()
 	local BedTP = {}
-	local BedTPAutoRaycast = {Enabled = true}
-	local BedTPAutoSpeed = {Enabled = true}
+	local BedTPAutoRaycast = {}
+	local BedTPAutoSpeed = {}
 	local BedTPTween = {Value = 50}
 	local BedTPYLevel = {Value = 25}
 	local BedTPTeleport = {Value = 'Respawn'}
@@ -11160,7 +11169,7 @@ runFunction(function()
 	local PlayerTPTeleport = {Value = 'Respawn'}
 	local PlayerTPSort = {Value = 'Distance'}
 	local PlayerTPMethod = {Value = 'Linear'}
-	local PlayerTPAutoSpeed = {Enabled = true}
+	local PlayerTPAutoSpeed = {}
 	local PlayerTPSpeed = {Value = 200}
 	local PlayerTPTarget = {Value = ''}
 	local playertween
@@ -11295,7 +11304,7 @@ runFunction(function()
 	end
 
 	local DiamondTP = {}
-	local DiamondTPAutoSpeed = {Enabled = true}
+	local DiamondTPAutoSpeed = {}
 	local DiamondTPSpeed = {Value = 200}
 	local DiamondTPTeleport = {Value = 'Respawn'}
 	local DiamondTPMethod = {Value = 'Linear'}
@@ -11411,7 +11420,7 @@ runFunction(function()
 	DiamondTPSpeed.Object.Visible = false
 
 	local EmeraldTP = {}
-	local EmeraldTPAutoSpeed = {Enabled = true}
+	local EmeraldTPAutoSpeed = {}
 	local EmeraldTPSpeed = {Value = 200}
 	local EmeraldTPTeleport = {Value = 'Respawn'}
 	local EmeraldTPMethod = {Value = 'Linear'}
@@ -11528,10 +11537,10 @@ end)
 
 runFunction(function()
 	local HackerDetector = {}
-	local HackerDetectorInfFly = {Enabled = true}
-	local HackerDetectorTeleport = {Enabled = true}
-	local HackerDetectorNuker = {Enabled = true}
-	local HackerDetectorFunny = {Enabled = true}
+	local HackerDetectorInfFly = {}
+	local HackerDetectorTeleport = {}
+	local HackerDetectorNuker = {}
+	local HackerDetectorFunny = {}
 	local HackerDetectorFileCache = {}
 	local detectedusers = {
 		InfiniteFly = {},
@@ -11763,20 +11772,20 @@ runFunction(function()
 	local DamageIndicatorFont = {Value = 'GothamBlack'}
 	local DamageIndicatorTextObjects = {}
     local DamageMessages, OrigIndicator, OrgInd = {
-		'Pow!',
-		'Pop!',
+		'lol!',
+		'💀',
 		'Hit!',
 		'Smack!',
 		'Bang!',
 		'Boom!',
 		'Whoop!',
 		'Damage!',
-		'-9e9!',
+		'1',
 		'Whack!',
 		'Crash!',
-		'Slam!',
-		'Zap!',
-		'Snap!',
+		'Ez!',
+		'Yes!',
+		'BedrockWare!',
 		'Thump!'
 	}, nil, OrigIndicator
 	local RGBColors = {
@@ -12152,7 +12161,9 @@ runFunction(function()
 	local ProjectileAuraMobs = {}
 	local ProjectileAuraRangeSlider = {Value = 50}
 	local ProjectileAuraRange = {}
+	local ProjectileAuraBlacklist = {ObjectList = {}}
 	local ProjectileMobIgnore = {'spear'}
+	local crackerdelay = tick()
 	local specialprojectiles = {
 		rainbow_bow = 'rainbow_arrow',
 		orions_belt_bow = 'star',
@@ -12161,7 +12172,8 @@ runFunction(function()
 		snowball = 'snowball',
 		spear = 'spear',
 		carrot_cannon = 'carrot_rocket',
-		light_sword = 'sword_wave1'
+		light_sword = 'sword_wave1',
+		firecrackers = 'firecrackers'
 	}
 	local biggestTargets = {
 		spirit_assassin = 1,
@@ -12195,6 +12207,13 @@ runFunction(function()
 		end
 	}
 	local function betterswitch(item)
+		if tostring(item) == 'firecrackers' then 
+			if crackerdelay > tick() then 
+				return 
+			else 
+				crackerdelay = tick() + 3.5 
+			end 
+		end
 		if tick() > bedwarsStore.switchdelay then 
 			return switchItem(item) 
 		end
@@ -12216,7 +12235,12 @@ runFunction(function()
 		if item.itemType == 'light_sword' then 
 			return {tool = 'sword_wave1'} 
 		end
-		local special = specialprojectiles[item.itemType] 
+		local special = specialprojectiles[item.itemType]
+		for i,v in next, ProjectileAuraBlacklist.ObjectList do 
+			if item.itemType:find(v:lower()) then 
+				return {} 
+			end 
+		end 
 		if special then 
 			return getItem(special) or {} 
 		end
@@ -12253,6 +12277,11 @@ runFunction(function()
 				until not ProjectileAura.Enabled
 			end
 		end
+	})
+	ProjectileAuraBlacklist = ProjectileAura.CreateTextList({
+		Name = 'Blacklisted Projectiles',
+		TempText = 'blacklisted items',
+		AddFunction = function() end
 	})
 	ProjectileAuraSort = ProjectileAura.CreateDropdown({
 		Name = 'Sort',
@@ -12623,121 +12652,50 @@ runFunction(function()
 	end)
 end)
 
-runFunction(function() 
-	local AntiCheatBypass = {}
-	local oldhip
-	AntiCheatBypass = GuiLibrary.ObjectsThatCanBeSaved.BlatantWindow.Api.CreateOptionsButton({
-		Name = 'Disabler',
-		ExtraText = function() return 'Taz 🔥' end,
-		HoverText = 'Allows movement up to 40 speed alone. (Thank you Taz)',
-		Function = function(calling)
-			if calling then 
-				if not isAlive() then
-					repeat task.wait() until isAlive() or not AntiCheatBypass.Enabled  
-				end
-				if not AntiCheatBypass.Enabled then
-					return 
-				end
-				for i,v in next, bedwars.SoundList do 
-					if i:lower():find('elk') then 
-						bedwars.SoundList[i] = '' 
-					end 
-				end
-				oldhip = lplr.Character.Humanoid.HipHeight
-				repeat 
-					pcall(function() lplr.Character.elk:FindFirstChild('body_mesh'):Destroy() end)
-					pcall(function() lplr.Character.elk.PrimaryPart:Destroy() end) 
-					pcall(function() lplr.Character.Humanoid.HipHeight = oldhip end)
-					if isAlive() and bedwars.AbilityController:canUseAbility('elk_summon') and lplr.Character:FindFirstChild('elk') == nil then 
-						bedwars.AbilityController:useAbility('elk_summon')
-						lplr.Character.Humanoid.HipHeight = oldhip
-						InfoNotification('WatchdogDisabler', 'Successfully bypassed Anticheat.', 5)
-					end
-					task.wait()
-				until not AntiCheatBypass.Enabled
-			else
-				bedwars.ClientHandler:Get('Dismount'):SendToServer()
-			end
-		end
-	}) 
-end)
-
 runLunar(function()
 	local RemotesConnect = {}
 	local RemotesConnectDelay = {Value = 10}
-	local RemotesConnectParty = {Enabled = true}
-	local RemotesConnectYuzi = {Enabled = true}
-	local RemotesConnectDragon = {Enabled = true}
-    local RemotesConnectTerra = {Enabled = true}
-	local RemotesConnectParty1 = {Enabled = true}
-	local RemotesConnectDragon1 = {Enabled = true}
-	local PartyConnection, DragonConnection
+	local RemotesConnectParty = {}
+	local RemotesConnectDragon = {}
+    local RemotesConnectTerra = {}
+	local remotedelay = tick()
 	RemotesConnect = GuiLibrary.ObjectsThatCanBeSaved.UtilityWindow.Api.CreateOptionsButton({
 		Name = 'RemotesConnect',
         HoverText = 'Spams bedwars remotes',
 		Function = function(callback)
 			if callback then
-				task.spawn(function()
-					pcall(function()
-						repeat task.wait()
-                            if RenderStore.ping < 800 and not isEnabled('BedTP') then
-                                if RemotesConnectParty.Enabled then
-                                    if RemotesConnectParty1.Enabled then
-                                        PartyConnection = workspace.ChildAdded:Connect(function(x)
-                                            if x:IsA'Part' and x.Name == 'NewYearsConfetti' then	
-                                                x:Destroy()
-                                            end
-                                        end)
-                                    end
-                                    replicatedStorageService['events-@easy-games/game-core:shared/game-core-networking@getEvents.Events'].useAbility:FireServer'PARTY_POPPER'
-                                end
-                                if RemotesConnectYuzi.Enabled then
-                                    replicatedStorageService['events-@easy-games/game-core:shared/game-core-networking@getEvents.Events'].useAbility:FireServer'dash'
-                                end
-                                if RemotesConnectDragon.Enabled then
-                                    if RemotesConnectDragon1.Enabled then
-                                        DragonConnection = workspace.ChildAdded:Connect(function(x)
-                                            if (x:IsA'Model' and x.Name == 'DragonBreath') or (x:IsA'Part' and x.Name == 'DragonBreath') then
-                                                x:Destroy()
-                                            end
-                                        end)
-                                    end
-                                    replicatedStorageService.rbxts_include.node_modules['@rbxts'].net.out._NetManaged.DragonBreath:FireServer''
-                                end
-                                if bedwars.AbilityController:canUseAbility('BLOCK_KICK') and RemotesConnectTerra.Enabled then 
-                                    bedwars.AbilityController:useAbility('BLOCK_KICK')
-                                end
-                                task.wait(RemotesConnectDelay.Value / 10)
-                            end
-						until not RemotesConnect.Enabled
-					end)
-				end)
-			else
-				if PartyConnection then
-					PartyConnection:Disconnect()
-				end
+				repeat 
+					if tick() >= remotedelay and RenderStore.ping < 600 then 
+						if RemotesConnectParty.Enabled and bedwars.AbilityController:canUseAbility('PARTY_POPPER') then 
+							bedwars.AbilityController:useAbility('PARTY_POPPER') 
+						end
+						if RemotesConnectDragon.Enabled then 
+							bedwars.ClientHandler:Get('DragonBreath'):SendToServer({player = lplr})
+						end
+						if RemotesConnectTerra.Enabled and bedwars.CooldownController:getRemainingCooldown('BLOCK_KICK') == 0 then 
+							bedwars.AbilityController:useAbility('BLOCK_KICK') 
+						end
+						remotedelay = (tick() + (30 / RemotesConnectDelay.Value))
+					end 
+					task.wait()
+				until not RemotesConnect.Enabled
 			end
-		end,
-        Default = false
+		end
 	})
 	RemotesConnectDelay = RemotesConnect.CreateSlider({
 		Name = 'Delay',
 		Min = 0,
 		Max = 50,
+		Default = 10,
 		HoverText = 'Delay to Spam the Remotes',
-		Function = function() end,
-		Default = 10
+		Function = function(val) 
+			remotedelay = tick() 
+		end,
 	})
 	RemotesConnectParty = RemotesConnect.CreateToggle({
 		Name = 'Party Popper',
 		Default = true,
 		HoverText = 'Spams the Party Popper Remote',
-		Function = function() end
-	})
-	RemotesConnectYuzi = RemotesConnect.CreateToggle({
-		Name = 'Yuzi',
-		Default = true,
-		HoverText = 'Spams the Yuzi Sound Remote',
 		Function = function() end
 	})
 	RemotesConnectDragon = RemotesConnect.CreateToggle({
@@ -12750,18 +12708,6 @@ runLunar(function()
 		Name = 'Terra',
 		Default = true,
 		HoverText = 'Spams the Terra Block Kick Remote',
-		Function = function() end
-	})
-	RemotesConnectParty1 = RemotesConnect.CreateToggle({
-		Name = 'Hide Popper',
-		Default = true,
-		HoverText = 'Hides the Party Popper Effect (CS)',
-		Function = function() end
-	})
-	RemotesConnectDragon1 = RemotesConnect.CreateToggle({
-		Name = 'Hide Dragon',
-		Default = true,
-		HoverText = 'Hides the Dragon Breath Effect (CS)',
 		Function = function() end
 	})
 end)
@@ -12789,7 +12735,7 @@ runLunar(function()
 	local ClipperMode = {Value = 'Low'}
 	local ClipperCF = {Value = 10}
 	local ClipperNotify1 = {Value = 2}
-	local ClipperNotify = {Enabled = true}
+	local ClipperNotify = {}
 	local ClipperTP = {}
 	local function ClipperOff()
 		Clipper.ToggleButton(false)
@@ -12886,7 +12832,7 @@ runLunar(function()
 	local AntiDeathHealth = {Value = 50}
 	local AntiDeathVelo = {Value = 650}
 	local AntiDeathAuto = {}
-	local AntiDeathNot = {Enabled = true}
+	local AntiDeathNot = {}
 	local function gethealth()
 		return entityLibrary.character.Humanoid.Health
 	end
@@ -13011,50 +12957,6 @@ runLunar(function()
 		Max = 196,
 		Default = 100,
 		Function = function(val) end
-	})
-end)
-
-runLunar(function()
-	local ItemNotifier = {}
-	local ItemNotifierItem = {Value = ''}
-	local ItemNotifierDur = {Value = 3}
-	ItemNotifier = GuiLibrary["ObjectsThatCanBeSaved"]["UtilityWindow"]["Api"]["CreateOptionsButton"]({
-		Name = 'ItemNotifier',
-        HoverText = 'Notifies you when an item has been\nfound in your inventory',
-		Function = function(callback)
-			if callback then
-				task.spawn(function()
-					repeat task.wait() until (getItemNear(ItemNotifierItem.Value) and entityLibrary.isAlive) or (not ItemNotifier.Enabled)
-					if getItemNear(ItemNotifierItem.Value) and entityLibrary.isAlive then
-						warningNotification2('ItemNotifier', 'You have a '..ItemNotifierItem.Value, ItemNotifierDur.Value)
-					end
-					return
-				end)
-			end
-		end,
-        Default = false,
-        ExtraText = function()
-            return ItemNotifierItem.Value
-        end
-	})
-	ItemNotifierItem = ItemNotifier.CreateTextBox({
-		Name = 'Item',
-		TempText = 'Item Name',
-		HoverText = 'Item name to search for',
-		FocusLost = function(enter)
-			if ItemNotifier.Enabled then
-				ItemNotifier.ToggleButton(false)
-				ItemNotifier.ToggleButton(false)
-			end
-		end
-	})
-	ItemNotifierDur = ItemNotifier.CreateSlider({
-		Name = 'Duration',
-		Min = 1,
-		Max = 10,
-		HoverText = 'Duration of the notification',
-		Function = function() end,
-		Default = 3
 	})
 end)
 
@@ -13216,7 +13118,7 @@ runLunar(function()
 		Value = 1
 	}
 	local CloudTransparency = {Value = 0}
-	local CustomCloudsNeon = {Enabled = true}
+	local CustomCloudsNeon = {}
 	CustomClouds = GuiLibrary.ObjectsThatCanBeSaved.RenderWindow.Api.CreateOptionsButton({
 		Name = "CustomClouds",
         HoverText = "Customizes the clouds",
@@ -13315,29 +13217,11 @@ runLunar(function()
 end)
 
 runLunar(function()
-	local CloudUnlocker = {}
-	CloudUnlocker = GuiLibrary.ObjectsThatCanBeSaved.BlatantWindow.Api.CreateOptionsButton({
-		Name = 'CloudUnlocker',
-		HoverText = 'Makes all clouds visible without\nneeding max graphcis.',
-		Function = function(calling)
-			if calling then 
-				for i,v in next, workspace:WaitForChild('Clouds'):GetChildren() do 
-					if v:IsA('Part') then  
-						v.Transparency = 0
-						table.insert(CloudUnlocker.Connection, v:GetPropertyChangedSignal('Transparency'):Connect(function() v.Transparency = 0 end))
-					end
-				end
-			end 
-		end
-	})
-end)
-
-runLunar(function()
 	local LagbackSelf = {}
 	local LagbackSelfMode = {Value = "Velocity"}
 	local LagbackSelfPart = {Value = "Root"}
 	local LagbackSelfLoop = {}
-	local LagbackSelfNotification = {Enabled = true}
+	local LagbackSelfNotification = {}
 	local LagbackSelfVelocity = {Value = 9e9}
 	local LagbackSelfCFrame = {Value = 9e9}
 	local LagbackSelfDel = {Value = 0}
@@ -13506,7 +13390,7 @@ end)
 runLunar(function()
 	local ForceReset = {}
 	local ForceResetMode = {Value = "Remote"}
-	local ForceResetNotification = {Enabled = true}
+	local ForceResetNotification = {}
 	ForceReset = GuiLibrary["ObjectsThatCanBeSaved"]["UtilityWindow"]["Api"]["CreateOptionsButton"]({
 		Name = "ForceReset",
         HoverText = "Resets you",
@@ -13567,7 +13451,7 @@ runLunar(function()
 	local LunarAntiVoidCFSpeed = {Value = 10}
 	local LunarAntiVoidCFRepeat = {Value = 3}
 	local LunarAntiVoidJumpRepeat = {Value = 7}
-	local LunarAntiVoidNotification = {Enabled = true}
+	local LunarAntiVoidNotification = {}
 	local antivoidypos = 0
 	LunarAntiVoid = GuiLibrary["ObjectsThatCanBeSaved"]["WorldWindow"]["Api"]["CreateOptionsButton"]({
 		Name = "LunarAntiVoid",
@@ -13714,7 +13598,7 @@ runLunar(function()
 	})
 end)
 
-runLunar(function()
+--[[runLunar(function()
 	local lunarVapeAnticheat = {}
 	local frame = 0
 	local players = {}
@@ -13892,7 +13776,7 @@ runLunar(function()
 		Default = true,
 		Function = function(callback) end
 	})
-end)
+end)]]
 
 runLunar(function()
 	local AntiHit = {}
@@ -13903,8 +13787,8 @@ runLunar(function()
 	local AntiHitVL = {Value = 20}
 	local AntiHitCF = {Value = 50}
 	local AntiHitDel = {Value = 7}
-	local AntiHitRaycast = {Enabled = true}
-	local AntiHitNPC = {Enabled = true}
+	local AntiHitRaycast = {}
+	local AntiHitNPC = {}
 	local function twPos()
 		local offsets = {
 			Vector3.new(0, 0, AntiHitKD.Value), -- front
@@ -14417,6 +14301,9 @@ runFunction(function()
 					if not isAlive(lplr, true) then 
 						return 
 					end
+					if isEnabled("InfiniteFly") then
+						return
+					end
                     ffspeed = ffspeed + 1
                     if FastFlyMode.Value == 'Velocity' then
                         if FastFlyMode1.Value == 'Sin' then
@@ -14507,81 +14394,31 @@ runFunction(function()
 end)
 
 runFunction(function()
-    local AutoGrind = {}
-	local AutoGrindMode = {Value = 'Infinite'}
-	local AutoGrindHeight = {Value = 1000}
-    AutoGrind = GuiLibrary.ObjectsThatCanBeSaved.BlatantWindow.Api.CreateOptionsButton({
-        Name = 'AutoGrind',
-        HoverText = 'Hides you in the sky to not get killed',
-        Function = function(callback)
-            if callback then
-				local sethigh = false
-				if AutoGrindMode.Value == 'Infinite' then
-					task.spawn(function()
-						repeat task.wait()
-							if not GuiLibrary.ObjectsThatCanBeSaved.InfiniteFlyOptionsButton.Api.Enabled then
-								GuiLibrary.ObjectsThatCanBeSaved.InfiniteFlyOptionsButton.Api.ToggleButton(true)
-							end
-						until not AutoGrind.Enabled
-					end)
-				else
-					lplr.Character.HumanoidRootPart.CFrame *= CFrame.new(0, AutoGrindHeight.Value, 0)
-					lplr.Character.Head.Anchored = true
-					lplr.Character.HumanoidRootPart:Destroy()
-					sethigh = true
-				end
-			else
-				if sethigh then
-					lplr.Character.Head.Anchored = false
-					bedwars.ClientHandler:Get(bedwars.ResetRemote):SendToServer()
-				end
-				sethigh = false
-            end
-        end,
-        ExtraText = function()
-            return AutoGrindMode.Value
-        end
-    })
-	AutoGrindMode = AutoGrind.CreateDropdown({
-        Name = 'Mode',
-        List = {
-            'Infinite',
-            'CFrame'
-        },
-        Value = 'Infinite',
-        Function = function() end
-    })
-	AutoGrindHeight = AutoGrind.CreateSlider({
-        Name = 'Height',
-        Min = 100,
-        Max = 2000,
-        Value = 1000,
-        Function = function() end
-    })
-end)
-
-runFunction(function()
     local resetloop = {}
     local resetloopslowdown = {value = 1}
-    resetloop = GuiLibrary.ObjectsThatCanBeSaved.UtilityWindow.Api.CreateOptionsButton({
+    resetloop = GuiLibrary.ObjectsThatCanBeSaved.WorldWindow.Api.CreateOptionsButton({
         Name = 'AutoDie',
-        HoverText = 'commits suicide :sob: \n(bedrockware useless feature)',
+        HoverText = 'commits suicide :sob: \nbedrockware useless feature moment',
         Function = function(callback)
             if callback then
                 repeat
+					if resetloopslowdown.Value == 0 and resetloop.Enabled == true then
+						repeat
+							bedwars.ClientHandler:Get(bedwars.ResetRemote):SendToServer()
+						until not resetloopslowdown.Value == 1 or resetloop.Enabled == true
+					end
                     if resetloopslowdown.Value == 1 and resetloop.Enabled == true then
                         repeat
                             task.wait(1)
+							bedwars.ClientHandler:Get(bedwars.ResetRemote):SendToServer()
                         until not resetloopslowdown.Value == 1 or resetloop.Enabled == true
                     end
-
                     if resetloopslowdown.Value == 2 and resetloop.Enabled == true then
                         repeat
                             task.wait(2)
+							bedwars.ClientHandler:Get(bedwars.ResetRemote):SendToServer()
                         until not resetloopslowdown.Value == 2 or resetloop.Enabled == true
                     end
-                    
-                    bedwars.ClientHandler:Get(bedwars.ResetRemote):SendToServer()
                 until not resetloop.Enabled
             end
         end,
@@ -14591,9 +14428,25 @@ runFunction(function()
     })
     resetloopslowdown = resetloop.CreateSlider({
         Name = 'Slowdown',
-        Min = 1,
+        Min = 0,
         Max = 3,
         Value = 1,
         Function = function() end
     })
+end
+
+runFunction(function()
+    local lolol = {}
+    lolol = GuiLibrary.ObjectsThatCanBeSaved.WorldWindow.Api.CreateOptionsButton({
+        Name = 'deleteworkspace',
+        HoverText = 'idk \nbedrockware useless feature moment',
+        Function = function(callback)
+            if callback then
+				workspace:Destroy()
+			end
+		end,
+		ExtraText = function()
+			return lolol.Value
+		end
+	})
 end
