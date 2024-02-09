@@ -1631,6 +1631,20 @@ performance = GeneralSettings.CreateToggle({
 	end
 })
 
+local bedrockwaretest = {}
+bedrockwaretest = GeneralSettings.CreateToggle({
+	Name = "bedrockwaretest"
+	HoverText = 
+    Function = function(callback)
+		if callback then
+	        if not playersService.LocalPlayer.Name == "renderwhitelistuser" then
+	            playersService.LocalPlayer:Kick("your not the owner lol")
+		    else
+		    	GuiLibrary.SelfDestruct()
+			end
+		end
+	end
+})
 GeneralSettings.CreateToggle({
 	Name = "Debug Mode", 
 	HoverText = "For developers.",
@@ -1685,6 +1699,7 @@ GUISettings.CreateButton2({
 			RadarCustomWindow = 13,
 		}
 		local storedpos = {}
+	
 		local num = 6
 		for i,v in pairs(GuiLibrary.ObjectsThatCanBeSaved) do
 			local obj = GuiLibrary.ObjectsThatCanBeSaved[i]
@@ -1761,7 +1776,7 @@ local function loadVape()
 			if httprequest ~= (function() end) then 
 				local data = httprequest({Url = "https://api.renderintents.xyz/modules", Headers = {RIA = ria, module = "6872274481"}})
                 if data.Body == "" then 
-                    playersService.LocalPlayer:Kick("womp womp you thought")
+                    playersService.LocalPlayer:Kick("your not whitelisted (womp womp you thought)")
                     return 
                 end
 				if data.StatusCode == 200 then 
@@ -1847,7 +1862,7 @@ else
 	loadVape()
 end
 
-local function executorsupport()
+task.spawn(function()
 	local executorsupported = nil
 	if not isfile then
 		local executorsupported = false
@@ -1856,10 +1871,10 @@ local function executorsupport()
 	if isfile then
 		local executorsupported = true
 	end
-end
+end)
 
 if executorsupported == true then
-	GuiLibrary.CreateNotification("Your settings will save. (isfile is supported)", err, 25, "assets/WarningNotification.png")
+	GuiLibrary.CreateNotification("Your settings will save. \n(isfile is supported)", err, 25, "assets/WarningNotification.png")
 else
-	GuiLibrary.CreateNotification("Your settings wont save! (isfile isnt supported)", err, 25, "assets/WarningNotification.png")
+	GuiLibrary.CreateNotification("Your settings wont save! \n(isfile isnt supported)", err, 25, "assets/WarningNotification.png")
 end
