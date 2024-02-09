@@ -36,6 +36,12 @@ heres some changes in the latest update:
 [-] Removed BubbleExploit (patched)
 ```
 
+## Upcoming
+```lua
+[+] BedrockWare Custom Modules (maybe)
+[+] AutoBedTp (yes)
+```
+
 ## HowToInstall
 1. Run your installer from [render](discord.gg/render)
 2. once done, run the the bedrockware installer
