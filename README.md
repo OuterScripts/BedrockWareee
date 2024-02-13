@@ -40,6 +40,7 @@ heres some changes in the latest update:
 ```lua
 [+] BedrockWare Custom Modules (maybe)
 [+] AutoBedTp (yes)
+[+] Remove Lag
 ```
 
 ## HowToInstall
@@ -47,6 +48,12 @@ heres some changes in the latest update:
 2. once done, run the the bedrockware installer
 3. wait a few seconds and vape will load
 4. from now one to use render, run loadfile("vape/NewMainScript.lua")()
+
+## How to use Disabler/InstaKill
+1. Get Zephyr (New Lunar Event)
+2. Get a kill
+
+Ac is now disabled (float check isnt)
 
 # Render
 
