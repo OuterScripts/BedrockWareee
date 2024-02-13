@@ -1,6 +1,6 @@
 --[[
 
-    Render Intents | Bedwars
+    Render Intents | BedrockWare | Bedwars
     The #1 vape mod you'll ever see.
 
     Version: 1.5
@@ -488,6 +488,9 @@ local function getSpeed()
 		end
 		if type(bedwarsStore.zephyrOrb) == 'number' and bedwarsStore.zephyrOrb > 0 then 
 			speed = speed + (RenderStore.acbypass and 28 or 25)
+		end
+		if lplr.Character:FindFirstChild('ac' or 'anticheat') then  
+			
 		end
 	end
 	return speed
@@ -10574,26 +10577,24 @@ runFunction(function()
 	local PlayerAttachRange = {Value = 30}
 	PlayerAttach = GuiLibrary.ObjectsThatCanBeSaved.BlatantWindow.Api.CreateOptionsButton({
 		Name = 'PlayerAttach',
-		HoverText = 'Rapes others :omegalol:',
+		HoverText = 'Rapes others :omegalol:\nfixed?',
 		Function = function(calling)
 			if calling then 
-				task.spawn(function()
-					repeat 
-						local range = (PlayerAttachTween.Enabled and PlayerAttachRange.Value + 2 or PlayerAttachRange.Value)
-						local target = GetTarget(range, nil, PlayerAttachRaycast.Enabled, PlayerAttachNPC.Enabled)
-						if target.RootPart == nil or not isAlive() then 
-							PlayerAttach.ToggleButton(false)
-							break 
-						end
-						lplr.Character.Humanoid.Sit = false
-						if PlayerAttachTween.Enabled then 
-							tweenService:Create(lplr.Character.HumanoidRootPart, TweenInfo.new(0.25, Enum.EasingStyle.Linear), {CFrame = target.RootPart.CFrame}):Play()
-						else
-						   lplr.Character.HumanoidRootPart.CFrame = target.RootPart.CFrame
-						end
-						task.wait()
-					until not PlayerAttach.Enabled
-				end)
+				repeat 
+					local range = (PlayerAttachTween.Enabled and PlayerAttachRange.Value + 2 or PlayerAttachRange.Value)
+					local target = GetTarget(range, nil, PlayerAttachRaycast.Enabled, PlayerAttachNPC.Enabled)
+					if target.RootPart == nil or not isAlive() then 
+						PlayerAttach.ToggleButton(false)
+						break 
+					end
+					lplr.Character.Humanoid.Sit = false
+					if PlayerAttachTween.Enabled then 
+						tweenService:Create(lplr.Character.HumanoidRootPart, TweenInfo.new(0.25, Enum.EasingStyle.Linear), {CFrame = target.RootPart.CFrame}):Play()
+					else
+					   lplr.Character.HumanoidRootPart.CFrame = target.RootPart.CFrame
+					end
+					task.wait()
+				until not PlayerAttach.Enabled
 			end
 		end
 	})
@@ -14402,23 +14403,8 @@ runFunction(function()
         Function = function(callback)
             if callback then
                 repeat
-					if resetloopslowdown.Value == 0 and resetloop.Enabled == true then
-						repeat
-							bedwars.ClientHandler:Get(bedwars.ResetRemote):SendToServer()
-						until not resetloopslowdown.Value == 1 or resetloop.Enabled == true
-					end
-                    if resetloopslowdown.Value == 1 and resetloop.Enabled == true then
-                        repeat
-                            task.wait(1)
-							bedwars.ClientHandler:Get(bedwars.ResetRemote):SendToServer()
-                        until not resetloopslowdown.Value == 1 or resetloop.Enabled == true
-                    end
-                    if resetloopslowdown.Value == 2 and resetloop.Enabled == true then
-                        repeat
-                            task.wait(2)
-							bedwars.ClientHandler:Get(bedwars.ResetRemote):SendToServer()
-                        until not resetloopslowdown.Value == 2 or resetloop.Enabled == true
-                    end
+					task.wait(resetloopslowdown / 1)
+					bedwars.ClientHandler:Get(bedwars.ResetRemote):SendToServer()	
                 until not resetloop.Enabled
             end
         end,
@@ -14429,7 +14415,7 @@ runFunction(function()
     resetloopslowdown = resetloop.CreateSlider({
         Name = 'Slowdown',
         Min = 0,
-        Max = 3,
+        Max = 10,
         Value = 1,
         Function = function() end
     })
@@ -14448,5 +14434,27 @@ runFunction(function()
 		ExtraText = function()
 			return lolol.Value
 		end
+	})
+end
+
+runFunction(function()
+    local customchatspam = {}
+	local customchatspammessage = {}
+    customchatspam = GuiLibrary.ObjectsThatCanBeSaved.WorldWindow.Api.CreateOptionsButton({
+        Name = 'CustomChatSpammer',
+        HoverText = 'idk \nbedrockware useless feature moment',
+        Function = function(callback)
+            if callback then
+				textChatService.ChatInputBarConfiguration.TargetTextChannel:SendAsync((#customchatspam.ObjectList > 0 and customchatspam.ObjectList[math.random(1, #customchatspam.ObjectList)] or 'bedrockware on top | .gg/render'))
+			end
+		end,
+		ExtraText = function()
+			return customchatspam.Value
+		end
+	})
+	 = .CreateTextList({
+		Name = 'Message',
+		TempText = 'Message to spam',
+		Function = function() end
 	})
 end
