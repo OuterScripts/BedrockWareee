@@ -14452,7 +14452,7 @@ runFunction(function()
 			return customchatspam.Value
 		end
 	})
-	 = .CreateTextList({
+	customchatspammessage = customchatspam.CreateTextList({
 		Name = 'Message',
 		TempText = 'Message to spam',
 		Function = function() end
