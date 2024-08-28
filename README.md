@@ -9,7 +9,8 @@
 - [BedrockWare](https://github.com/OuterScripts/BedrockWareee/tree/main?tab=readme-ov-file#bedrockware)
 - [how to install](https://github.com/OuterScripts/BedrockWareee/tree/main?tab=readme-ov-file#howtoinstall)
 
-# Installer
+# This config is discontinued.
+## Installer
 ```lua
 loadstring(game:HttpGet("https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/Scripts/Installer.lua"))()
 ```
@@ -38,30 +39,25 @@ heres some changes in the latest update:
 
 ## Upcoming
 ```lua
-[+] BedrockWare Custom Modules (maybe)
-[+] AutoBedTp (yes)
-[+] Remove Lag
+[*] Re-release
 ```
 
-## HowToInstall
-1. Run your installer from [render](discord.gg/render)
-2. once done, run the the bedrockware installer
-3. wait a few seconds and vape will load
-4. from now one to use render, run loadfile("vape/NewMainScript.lua")()
+## How to install
+1. Run your installer from [Render](discord.gg/renderintents)
+2. Once done, run the the BedrockWare installer
+3. Wait a few seconds and Vape will load
+4. From now one to use render, run loadfile("vape/loader.lua")()
 
 ## How to use Disabler/InstaKill
-1. Get Zephyr (New Lunar Event)
+1. Get Zephyr
 2. Get a kill
-
-Ac is now disabled (float check isnt)
+Speed check is now fried!
 
 # Render
-
-* You need [Render](https://discord.gg/render) to use this.
+* You need [Render](https://discord.gg/renderintents) to use this.
 
 # Contact
-
-* if its not working, dm **kidtoxicyt** on discord and ill fix the issue (server being made)
+* if its not working, dm **nnouterr** on discord and ill address the issue
 
 # BedrockWare
 ![Unlimited Possibilities](https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/Screenshot_20240204-163741.png)
