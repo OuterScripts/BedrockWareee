@@ -9,8 +9,8 @@
 - [BedrockWare](https://github.com/OuterScripts/BedrockWareee/tree/main?tab=readme-ov-file#bedrockware)
 - [how to install](https://github.com/OuterScripts/BedrockWareee/tree/main?tab=readme-ov-file#howtoinstall)
 
-> ![WARNING]
-> BedrockWare is officially discontinued as of **August 28, 2024**.
+> [!WARNING]
+> As of **August 28, 2024**, BedrockWare is officially discontinued.
 
 ## Installer
 ```lua
@@ -45,7 +45,7 @@ heres some changes in the latest update:
 ```
 
 ## How to install
-1. Run your installer from [Render](discord.gg/renderintents)
+1. Run your installer from [Render](discord.gg/render)
 2. Once done, run the the BedrockWare installer
 3. Wait a few seconds and Vape will load
 4. From now one to use render, run loadfile("vape/loader.lua")()
@@ -56,7 +56,7 @@ heres some changes in the latest update:
 Speed check is now fried!
 
 # Render
-* You need [Render](https://discord.gg/renderintents) to use this.
+* You need [Render](https://discord.gg/render) to use this.
 
 # Contact
 * if its not working, dm **nnouterr** on discord and ill address the issue
