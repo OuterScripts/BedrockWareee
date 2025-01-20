@@ -1,3 +1,6 @@
+> [!WARNING]
+> As of **August 28, 2024**, BedrockWare is officially discontinued.
+
 ![BedrockWare logo](https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/dev/BedrockWareLogo.png)
 
 # Table Of Contents
@@ -8,9 +11,6 @@
 - [Contact](https://github.com/OuterScripts/BedrockWareee/tree/main?tab=readme-ov-file#contact)
 - [BedrockWare](https://github.com/OuterScripts/BedrockWareee/tree/main?tab=readme-ov-file#bedrockware)
 - [how to install](https://github.com/OuterScripts/BedrockWareee/tree/main?tab=readme-ov-file#howtoinstall)
-
-> [!WARNING]
-> As of **August 28, 2024**, BedrockWare is officially discontinued.
 
 ## Installer
 ```lua
