@@ -9,7 +9,9 @@
 - [BedrockWare](https://github.com/OuterScripts/BedrockWareee/tree/main?tab=readme-ov-file#bedrockware)
 - [how to install](https://github.com/OuterScripts/BedrockWareee/tree/main?tab=readme-ov-file#howtoinstall)
 
-# This config is discontinued.
+> ![WARNING]
+> BedrockWare is officially discontinued as of **August 28, 2024**.
+
 ## Installer
 ```lua
 loadstring(game:HttpGet("https://raw.githubusercontent.com/OuterScripts/BedrockWareee/main/Scripts/Installer.lua"))()
